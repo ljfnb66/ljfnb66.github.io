@@ -1,0 +1,54 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: About us - IRES Lab @ BUPT # 网站标题，显示在浏览器标签页和页面顶部
+email: your-email@example.com # 网站联系邮箱
+description: > # this means to ignore newlines until "baseurl:" (# 网站描述，用于SEO和元数据)
+  Yet another Jekyll theme. It is designed for business purpose and ported by 
+  Melvin Ch'ng.
+baseurl: "" # the subpath of your site, e.g. /blog (# 网站子路径（如部署在子目录时使用，默认留空）)
+url: "" # the base hostname & protocol for your site, e.g. http://example.com (# 网站完整域名（含协议，如https://example.com）)
+
+# Company Information
+company_name: 智能机器人设计与机电控制  # 公司名称
+address_line:  北京 · 中国 # 公司地址
+telephone_number: 1.800.245.356  # 联系电话
+fax_number: 1.800.245.357  # 传真号码
+company_email: lihaiyuan@bupt.edu.cn  # 公司邮箱
+google_map: https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3618.727010735933!2d91.837871!3d24.907291700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1404919738144
+# 谷歌地图嵌入链接
+
+# Social Link
+facebook_link: http://www.facebook.com  # Facebook链接
+twitter_link: http://www.twitter.com  # Twitter链接
+linkedin_link: http://www.linkedin.com  # LinkedIn链接
+googleplus_link: http://plus.google.com  # Google+链接
+
+# Build settings
+markdown: kramdown  # 使用kramdown作为Markdown解析器
+plugins:
+  - jekyll-feed  # 启用jekyll-feed插件，生成RSS/Atom订阅源
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
