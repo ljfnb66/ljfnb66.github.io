@@ -4,37 +4,121 @@
   
     <!-- 导航栏内容 -->
 
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
+    <!-- 导航栏头部 -->
+    <div class="navbar-header">
+      <!-- 三横线菜单按钮 -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-    <a class="navbar-brand wow fadeInDownBig" href="index.html"><img class="office-logo" src="../assets/img/IRES_slider/lablogo2.png" alt="Office"></a>      
-  </div>
+      <!-- 左侧Logo和文字 -->
+      <a class="navbar-brand wow fadeInDownBig" href="index.html">
+        <!-- Logo图片 -->
+        <img class="office-logo" src="../assets/img/IRES_slider/lablogo2.png" alt="IRES Lab Logo">
+        <!-- 右侧文字部分 -->
+        <div class="lab-text">
+          <!-- 上部分文字 -->
+          <div class="lab-name" style="color: #666666; font-weight: bold; font-size: 18px;">IRES Lab</div>
+          <!-- 下部分文字 -->
+          <div class="lab-description" style="color: #999999; font-size: 12px;">Intelligent Robot With Creativity And Application</div>
+        </div>
+      </a>
+    </div>
 
-  <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav pull-right">
-      <li class="active">
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/about.html">About</a>
-      </li>
-      <li>
-        <a href="/blog.html">Blog</a>
-      </li>
-      <li>
-        <a href="/team.html">Team</a>
-      </li>
-      <li>
-        <a href="/contact.html"><span>Contact</span></a>
-      </li>
-    </ul>         
-  </div>
+    <!-- 导航链接部分 -->
+    <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
+      <!-- 右侧导航菜单 -->
+      <ul class="nav navbar-nav pull-right">
+        <li class="active">
+          <!-- 首页链接 -->
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/about.html">About</a>
+        </li>
+        <li>
+          <a href="/blog.html">Blog</a>
+        </li>
+        <li>
+          <a href="/team.html">Team</a>
+        </li>
+        <li>
+          <a href="/contact.html">Contact</a>
+        </li>
+      </ul>         
+    </div>
   </div>
 </nav>
 
 <!-- End Header -->
+
+<style>
+  /* 导航栏样式 */
+  .navbar {
+    background-color: #ffffff; /* 白色背景 */
+    padding: 15px 0; /* 内边距 */
+    border-radius: 0; /* 移除圆角 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 添加阴影 */
+  }
+
+  /* 左侧Logo和文字容器 */
+  .navbar-brand {
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    padding: 0; /* 移除默认内边距 */
+  }
+
+  /* Logo图片样式 */
+  .office-logo {
+    height: 40px; /* 调整logo高度 */
+    margin-right: 10px; /* 与文字的间距 */
+  }
+
+  /* 右侧导航菜单项 */
+  .navbar-nav li a {
+    color: #666666; /* 默认文字颜色 */
+    font-weight: 500; /* 字体粗细 */
+    padding: 10px 15px; /* 内边距 */
+    position: relative; /* 相对定位，用于悬停效果 */
+  }
+
+  /* 悬停效果 */
+  .navbar-nav li a:hover::after {
+    content: ""; /* 添加伪元素 */
+    position: absolute;
+    bottom: 0; /* 定位在底部 */
+    left: 0;
+    width: 100%; /* 宽度与文字相同 */
+    height: 3px; /* 线的高度 */
+    background-color: #c50000; /* 线的颜色 */
+  }
+
+  /* 当前活动项的样式 */
+  .navbar-nav li.active a {
+    color: #c50000; /* 激活状态颜色 */
+    font-weight: bold; /* 加粗 */
+  }
+
+  /* 折叠按钮样式 */
+  .navbar-toggle {
+    border: none; /* 移除边框 */
+    background: none; /* 透明背景 */
+  }
+
+  .navbar-toggle .icon-bar {
+    background-color: #666666; /* 调整横线颜色 */
+  }
+
+  /* 响应式调整 */
+  @media (max-width: 768px) {
+    .lab-text {
+      display: none; /* 在小屏幕上隐藏文字 */
+    }
+    .navbar-nav {
+      margin-top: 10px; /* 移动设备上菜单的间距 */
+    }
+  }
+</style>

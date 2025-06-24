@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: About us - IRES Lab @ BUPT # 网站标题，显示在浏览器标签页和页面顶部
+title: IRES Lab @ BUPT - Intelligent Robot With Creativity And Application # 网站标题，显示在浏览器标签页和页面顶部
 email: your-email@example.com # 网站联系邮箱
 description: > # this means to ignore newlines until "baseurl:" (# 网站描述，用于SEO和元数据)
   Yet another Jekyll theme. It is designed for business purpose and ported by 
