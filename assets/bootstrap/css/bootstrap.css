@@ -477,6 +477,37 @@ p {
   font-weight: bold; /* 可选：增加字体粗细，使显示更醒目 */
   line-height: 1.4;
 }
+
+ /* 新增的小标题样式 */
+ .subtitle {
+  font-size: 16px; /* 适当的字体大小 */
+  color: #222222; /* 更深的字体颜色 */
+  font-weight: bold; /* 加粗字体 */
+  margin-top: 20px; /* 顶部外边距 */
+  margin-bottom: 10px; /* 底部外边距 */
+  padding-bottom: 5px; /* 底部内边距 */
+  border-bottom: 1px solid #333333; /* 底部边框，使标题更突出 */
+  display: inline-block; /* 使边框只围绕文本 */
+}
+
+/* 课程列表样式 */
+.course-list {
+  list-style-type: disc;  /* 实心圆标记，可改为circle（空心圆）或square（方块） */
+  padding-left: 20px;    /* 左侧内边距，控制列表缩进 */
+  margin-top: 5px;       /* 顶部外边距 */
+  margin-bottom: 15px;   /* 底部外边距 */
+}
+
+.course-list li {
+  margin-bottom: 8px;    /* 列表项之间的间距 */
+  line-height: 1.6;      /* 行高，提高可读性 */
+}
+
+/* 科研项目列表样式 */
+.course-list li::before {
+  content: "";           /* 移除自动添加的点 */
+}
+
 @media (min-width: 768px) {
   .lead {
     font-size: 21px;
