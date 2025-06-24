@@ -470,8 +470,11 @@ p {
 }
 .lead {
   margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: 200;
+  /* font-size: 16px; */
+  font-size: 18px;
+  color: #333333; /* 加深字体颜色 */
+  /* font-weight: 200; */
+  font-weight: bold; /* 可选：增加字体粗细，使显示更醒目 */
   line-height: 1.4;
 }
 @media (min-width: 768px) {
@@ -4460,6 +4463,7 @@ a.thumbnail.active {
 }
 .alert-success hr {
   border-top-color: #c9e2b3;
+  border-color: #333333; /* 加深水平线颜色，使其与字体颜色更协调 */
 }
 .alert-success .alert-link {
   color: #2b542c;
