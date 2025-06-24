@@ -21,9 +21,9 @@
         <!-- 右侧文字部分 -->
         <div class="lab-text">
           <!-- 上部分文字 -->
-          <div class="lab-name" style="color: #666666; font-weight: bold; font-size: 18px;">IRES Lab</div>
+          <div class="lab-name">IRES Lab</div>
           <!-- 下部分文字 -->
-          <div class="lab-description" style="color: #999999; font-size: 12px;">Intelligent Robot With Creativity And Application</div>
+          <div class="lab-description">Intelligent Robot With Creativity And Application</div>
         </div>
       </a>
     </div>
@@ -77,15 +77,48 @@
     margin-right: 10px; /* 与文字的间距 */
   }
 
+  /* 右侧文字部分 */
+  .lab-text {
+    display: flex;
+    flex-direction: column; /* 垂直排列文字 */
+  }
+
+  /* 上部分文字样式 */
+  .lab-name {
+    color: #800000; /* 深红色 */
+    font-weight: bold; /* 加粗 */
+    font-size: 20px; /* 字体大小 */
+    margin-bottom: 3px; /* 与下部分文字的间距 */
+    text-decoration: none; /* 移除链接下划线 */
+  }
+
+  /* 下部分文字样式 */
+  .lab-description {
+    color: #666666; /* 深灰色 */
+    font-size: 12px; /* 字体大小 */
+    text-decoration: none; /* 移除链接下划线 */
+  }
+
   /* 右侧导航菜单项 */
   .navbar-nav li a {
-    color: #666666; /* 默认文字颜色 */
-    font-weight: 500; /* 字体粗细 */
+    color: #800000; /* 默认文字颜色 */
+    font-weight: normal; /* 字体粗细 */
     padding: 10px 15px; /* 内边距 */
     position: relative; /* 相对定位，用于悬停效果 */
+    text-decoration: none; /* 移除链接下划线 */
+  }
+
+  /* 当前活动项的样式 */
+  .navbar-nav li.active a {
+    color: #800000; /* 激活状态颜色 */
+    font-weight: normal; /* 字体粗细 */
   }
 
   /* 悬停效果 */
+  .navbar-nav li a:hover {
+    color: #800000; /* 悬停时文字颜色 */
+  }
+
   .navbar-nav li a:hover::after {
     content: ""; /* 添加伪元素 */
     position: absolute;
@@ -93,13 +126,7 @@
     left: 0;
     width: 100%; /* 宽度与文字相同 */
     height: 3px; /* 线的高度 */
-    background-color: #c50000; /* 线的颜色 */
-  }
-
-  /* 当前活动项的样式 */
-  .navbar-nav li.active a {
-    color: #c50000; /* 激活状态颜色 */
-    font-weight: bold; /* 加粗 */
+    background-color: #800000; /* 线的颜色 */
   }
 
   /* 折叠按钮样式 */
