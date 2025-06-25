@@ -1,0 +1,33 @@
+[
+    {
+      "year": "2025",
+      "papers": [
+        {
+          "title": "Developing low-cost 3D-printed prosthetics with a functional wrist for patients along the Thai-Myanmar border",
+          "authors": "Elkind, Emese; Tun, Aung Tin; Radcliffe, Olivia; Connolly, Laura; Davison, Colleen; Purkey, Eva; Mousavi, Parvin; Fichtinger, Gabor; Thornton, Kanchana",
+          "conference": "INOVAIT Image-Guided Therapy (IGT) x Imaging Network Ontario (ImNO), 2025",
+          "abstract": "Inadequacies in the Burmese healthcare system, heightened by the 2021 military coup and related civil war in Myanmar and the COVID-19 pandemic, have contributed to an influx of refugees to Thailand to seek medical aid. This study presents a design for an interchangeable and functional prosthetic wrist that enables critical hand motions such as rotation.",
+          "links": "https://labs.cs.queensu.ca/perklab/eelkind_imno2025_poster_wrist/"
+        }
+      ]
+    },
+    {
+      "year": "2022",
+      "papers": [
+        {
+          "title": "A Modular and Extended Positioning Robotic System for Percutaneous Puncture Surgery",
+          "authors": "Li Haiyuan*, Cui Linlin, Zhang Yuhang, Zhang Qinjian and Wang Haoyu Wang",
+          "conference": "2022 IEEE International Conference on Robotics and Biomimetics (ROBIO), Jinghong, China, 2022, pp. 1953-1957",
+          "abstract": "This paper presents a modular and extended positioning robotic system designed for percutaneous puncture surgery, aiming to improve the precision and efficiency of medical procedures.",
+          "links": "https://example.com/robio2022"
+        },
+        {
+          "title": "Path Planning and Control for Modular Self-assembling Robots on Rough Terrain",
+          "authors": "Li Haiyuan*, Wang Haoyu, Zhang Bin and Zhang Qinjian Zhang",
+          "conference": "2022 IEEE International Conference on Robotics and Biomimetics (ROBIO), Jinghong, China, 2022, pp. 1953-1957",
+          "abstract": "This study focuses on developing effective path planning and control strategies for modular self-assembling robots operating on rough and uneven terrain.",
+          "links": "https://example.com/robio2022-terrain"
+        }
+      ]
+    }
+  ]
