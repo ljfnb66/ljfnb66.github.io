@@ -36,7 +36,7 @@ published: true
   </section>
 
   <!-- Publications by Year Section -->
-  <section class="publications-section">
+  <!-- <section class="publications-section">
     <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">2025</h2>
     <div class="row">
       <div class="col-md-12">
@@ -51,11 +51,41 @@ published: true
               <p style="margin-bottom: 5px; font-size: 16px;">Journal of Mechanism and Robotics. Jun 2025, 17(6): 065001.</p>
               <p style="margin-bottom: 5px; font-size: 16px;">
                 <a href="#" style="color: #0A4062; text-decoration: none;">Abstract</a> |
-                <a href="#https://asmedigitalcollection.asme.org/mechanismsrobotics/article/17/6/065001/1211022/An-Ultrasound-Guided-Miniature-Hand-Eye-Integrated" style="color: #0A4062; text-decoration: none;">Links</a>
+                <a href="#https://asmedigitalcollection.asme.org/mechanismsrobotics/article-abstract/17/6/065001/1211022/An-Ultrasound-Guided-Miniature-Hand-Eye-Integrated?redirectedFrom=fulltext" style="color: #0A4062; text-decoration: none;">Links</a>
               </p>
               <div style="display: none; margin-top: 10px; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9;">
                 <p style="margin-bottom: 10px; font-size: 14px;">Abstract content goes here...</p>
                 <p style="margin-bottom: 10px; font-size: 14px;">Links content goes here...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="publications-section">
+    <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">2025</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="publication-item">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="assets/img/gif/2024JMRUSguidedPuncturerobot.gif" alt="2024JMRUSguidedPuncturerobot" style="width: 100%; border-radius: 5px;">
+            </div>
+            <div class="col-md-9">
+              <p style="margin-bottom: 5px; font-size: 16px;">Li Haiyuan*, He Tian, Yang Mingda, Chao Minghui, Zhang Qinjian, Song Hongxing.</p>
+              <p style="margin-bottom: 5px; font-size: 16px; color: #c50000; font-weight: bold;">An Ultrasound-guided Miniature Hand-eye Integrated Robot for Percutaneous Needle Placement [J].</p>
+              <p style="margin-bottom: 5px; font-size: 16px;">Journal of Mechanism and Robotics. Jun 2025, 17(6): 065001.</p>
+              <p style="margin-bottom: 5px; font-size: 16px;">
+                <a href="#" class="abstract-toggle" data-target="abstract-1">Abstract</a> |
+                <a href="#" class="links-toggle" data-target="links-1">Links</a>
+              </p>
+              <div id="abstract-1" class="hidden-content" style="display: none; margin-top: 10px; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9;">
+                <p style="margin-bottom: 10px; font-size: 14px;">Abstract content goes here...</p>
+              </div>
+              <div id="links-1" class="hidden-content" style="display: none; margin-top: 10px; padding: 10px; border: 1px solid #ddd; background-color: #f9f9f9;">
+                <p style="margin-bottom: 10px; font-size: 14px;"><a href="https://asmedigitalcollection.asme.org/mechanismsrobotics/article/17/6/065001/1211022/An-Ultrasound-Guided-Miniature-Hand-Eye-Integrated" target="_blank">View Article</a></p>
               </div>
             </div>
           </div>
@@ -731,7 +761,7 @@ published: true
 </div>
 <!--End Main Container -->
 
-<script>
+<!-- <script>
   // JavaScript for handling the expand/collapse functionality
   document.addEventListener('DOMContentLoaded', function() {
     const abstractLinks = document.querySelectorAll('a[href="#"]');
@@ -747,7 +777,37 @@ published: true
       });
     });
   });
-</script>
+</script> -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Abstract Toggle
+    document.querySelectorAll('.abstract-toggle').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const content = document.getElementById(this.getAttribute('data-target'));
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    });
+  
+    // Links Toggle
+    document.querySelectorAll('.links-toggle').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const content = document.getElementById(this.getAttribute('data-target'));
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+        } else {
+          content.style.display = 'block';
+        }
+      });
+    });
+  });
+  </script>
 
 <style>
   /* Publications Section Styles */
