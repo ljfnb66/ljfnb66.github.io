@@ -1,49 +1,204 @@
 ---
 layout: default_style
-permalink: /blog
-published: true
+permalink: /publications/
+author_profile: true
 ---
 <!-- Main Container -->
-<div id="banners"></div>
 <div class="container">
-  {% for post in site.posts %}
-  <div class="blog-post">
-      <h1 class="blog-title">
-        <i class="fa fa-file-text"></i>
-        {{ post.title }}
-      </h1>
-      <br>
-      <img src="assets/img/slider/{{ post.picture }}" alt="Feature-img" align="right" width="100%" class="blog-image">
-      <br>
-      <p>{{ post.description }}</p>
-      <span class="badge">{{ post.date | date: '%B %d, %Y' }}</span>
-      <div class="pull-right">
-        {% if post.label_default %}
-          <span class="label label-default">{{ post.label_default }}</span> 
-        {% endif %}
+  <!-- Publications Title -->
+  <h1 style="font-size: 28px; margin-bottom: 40px; font-weight: 500;">Publications</h1>
 
-        {% if post.label_primary %}
-          <span class="label label-primary">{{ post.label_primary }}</span> 
-        {% endif %}
-        
-        {% if post.label_success %}
-          <span class="label label-success">{{ post.label_success }}</span> 
-        {% endif %}
-        
-        {% if post.label_info %}
-          <span class="label label-info">{{ post.label_info }}</span> 
-        {% endif %}
-        
-        {% if post.label_warning %}
-          <span class="label label-warning">{{ post.label_warning }}</span>
-        {% endif %}
-
-        {% if post.label_danger %}
-          <span class="label label-danger">{{ post.label_danger }}</span>
-        {% endif %}
-      </div>         
+  <!-- Research Field Section -->
+  <section class="publications-section">
+    <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">Research Field</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="research-field">
+          <p style="margin-bottom: 5px; font-size: 16px;"><a href="https://lihaiyuan-ires.github.io/images/biolihaiyuan.pdf" style="color: #0A4062; text-decoration: none;">[CV in English]</a></p>
+          <h3 style="font-size: 20px; margin-bottom: 15px; font-weight: 500;">Surgical Robot</h3>
+          <ul style="margin-bottom: 20px; font-size: 16px;">
+            <li>Flexible robot for endoscopic surgery, e.g., robotic head and neck surgery</li>
+            <li>Ultrasound-guided robot, ultrasound and robot calibration, registration and planning control as well as robot design for prostate, liver</li>
+          </ul>
+          <h3 style="font-size: 20px; margin-bottom: 15px; font-weight: 500;">Robot Hand and Robot Manipulation</h3>
+          <ul style="margin-bottom: 20px; font-size: 16px;">
+            <li>Reconfigurable robot hand</li>
+            <li>Grasp</li>
+          </ul>
+          <h3 style="font-size: 20px; margin-bottom: 15px; font-weight: 500;">Modular Robotics</h3>
+          <ul style="margin-bottom: 20px; font-size: 16px;">
+            <li>Self-assembling robot, swarm robot with mechanical interconnection or autonomous docking</li>
+            <li>Self-reconfigurable robot</li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <hr>
-  {% endfor %}
+  </section>
+
+  <!-- Publications by Year Section -->
+  <section class="publications-section">
+    <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">2025</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="publication-item">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="https://lihaiyuan-ires.github.io/images/2024JMRUSguidedPuncturerobot.gif" alt="2024JMRUSguidedPuncturerobot" style="width: 100%; border-radius: 5px;">
+            </div>
+            <div class="col-md-9">
+              <p style="margin-bottom: 5px; font-size: 16px;">Li Haiyuan*, He Tian, Yang Mingda, Chao Minghui, Zhang Qinjian, Song Hongxing. An Ultrasound-guided Miniature Hand-eye Integrated Robot for Percutaneous Needle Placement [J]. Journal of Mechanism and Robotics. Jun 2025, 17(6): 065001. <a href="https://asmedigitalcollection.asme.org/mechanismsrobotics/article/17/6/065001/1211022/An-Ultrasound-Guided-Miniature-Hand-Eye-Integrated" style="color: #0A4062; text-decoration: none;">[Fulltext]</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="publications-section">
+    <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">2024</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="publication-item">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="https://lihaiyuan-ires.github.io/images/2024robiocablesurgicalrobot.gif" alt="2024robiocablesurgicalrobot" style="width: 100%; border-radius: 5px;">
+            </div>
+            <div class="col-md-9">
+              <p style="margin-bottom: 5px; font-size: 16px;">Guo Jiacheng, Zhang Qinjian, Li Haiyuan*, Ni Xin, Zhang Yaopeng and Tian Sukun. Kigitnematic Modeling and Control of a Wire-Driven Surgical Robot. The 2024 IEEE International Conference on Robotics and Biomimetics, Bangkok, Thailand, December 10-14, 2024.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="publication-item">
+          <div class="row">
+            <div class="col-md-3">
+              <img src="https://lihaiyuan-ires.github.io/images/2024ICIRAdeformationneedle.gif" alt="2024ICIRAdeformationneedle" style="width: 100%; border-radius: 5px;">
+            </div>
+            <div class="col-md-9">
+              <p style="margin-bottom: 5px; font-size: 16px;">Yuexuan Wang, Qinjian Zhang, Haiyuan Li*, and Hongxing Song. Deformation Modeling of Interaction Between Puncture Needle and Soft Biological Tissues. The 17th International Conference on Intelligent Robotics and Applications, Xi'an, China, July 31–August 2, 2024, pp. 1-16. <a href="https://doi.org/10.1007/978-981-99-0617-8_7" style="color: #0A4062; text-decoration: none;">[Fulltext]</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="publications-section">
+    <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">2022</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="publication-item">
+          <p style="margin-bottom: 5px; font-size: 16px;">Li Haiyuan*, Cui Linlin, Zhang Yuhang, Zhang Qinjian and Wang Haoyu Wang. A Modular and Extended Positioning Robotic System for Percutaneous Puncture Surgery. 2022 IEEE International Conference on Robotics and Biomimetics (ROBIO), Jinghong, China, 2022, pp. 1953-1957. <a href="https://ieeexplore.ieee.org/document/10011759" style="color: #0A4062; text-decoration: none;">[Fulltext]</a></p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="publication-item">
+          <p style="margin-bottom: 5px; font-size: 16px;">Li Haiyuan*, Wang Haoyu, Zhang Bin and Zhang Qinjian Zhang. Path Planning and Control for Modular Self-assembling Robots on Rough Terrain. 2022 IEEE International Conference on Robotics and Biomimetics (ROBIO), Jinghong, China, 2022, pp. 1953-1957. <a href="https://ieeexplore.ieee.org/document/100120169" style="color: #0A4062; text-decoration: none;">[Fulltext]</a></p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="publication-item">
+          <!-- 更多2022年的文章 -->
+          <p style="margin-bottom: 5px; font-size: 16px;">Yu Hongze, Li Haiyuan*, Wang Yan. Teleoperation of a dexterous hand using a wearable hand. The Seventh International Conference on Cognitive Systems and Information Processing (ICCSIP 2022), Communications in Computer and Information Science, vol 1787. Springer, Singapore. <a href="https://link.springer.com/chapter/10.1007/978-981-99-0617-8_38" style="color: #0A4062; text-decoration: none;">[Fulltext]</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="publications-section">
+    <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">2021</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="publication-item">
+          <p style="margin-bottom: 5px; font-size: 16px;">Haiyuan Li*, Linlin Cui, Yuxuan Qiu, Lutao Yan, Qinjian Zhang. System Design and Simulation Experiments of a Virtual Reality Based Tele-operated Surgical Robot System. The 2021 IEEE International Conference on Robotics and Biomimetics(IEEE), Sanya, China, December 6-10. <a href="https://ieeexplore.ieee.org/document/9827357" style="color: #0A4062; text-decoration: none;">[Fulltext]</a></p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="publication-item">
+          <p style="margin-bottom: 5px; font-size: 16px;">Wu Zhang#, Haiyuan Li#, Linlin Cui, Haiyang Li, Xiangyan Zhang, Shanxiang Fang, Qinjian Zhang*. Research progress and development trend of surgical robot and surgical instrument arm. The international Journal of Medical Robotics and Computer Assisted Surgery, 7(5):e2309, July 6, 2021. doi: 10.1002/rcs.2309 <a href="https://onlinelibrary.wiley.com/doi/10.1002/rcs.2309#" style="color: #0A4062; text-decoration: none;">[Fulltext]</a> <span style="color:blue;"> (A top cited article 2022) </span> <span style="color:red;"> (A top downloaded article) </span></p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="publication-item">
+          <!-- 更多2021年的文章 -->
+          <p style="margin-bottom: 5px; font-size: 16px;">Dai Xiaofeng#, Li Haiyuan#. Plasma Robot Engineering: The Next Generation of Precision Disease Management. Annals of Biomedical Engineering, 49: 1593–1597, June 3, 2021. <a href="https://doi.org/10.1007/s10439-021-02799-8" style="color: #0A4062; text-decoration: none;">[Fulltext]</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="publications-section">
+    <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">Before 2021</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="publication-item">
+          <p style="margin-bottom: 5px; font-size: 16px;">李海源, 刘畅, 严鲁涛, 张斌, 李端玲, 张勤俭. 上肢外骨骼机器人的阻抗控制与关节试验研究. 机械工程学报. 2020, 56(19): 200-209.DOI: 10.3901/JME.2020.19.200 <a href="https://doi.org/10.3901/JME.2020.19.200" style="color: #0A4062; text-decoration: none;">[Fulltext]</a></p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="publication-item">
+          <p style="margin-bottom: 5px; font-size: 16px;">Chang Liu, Haiyuan Li, Qinjian Zhang. Configuration Comparison and Design of an Upper Limb Exoskeleton for Robot Teleoperation [C].IEEE International Conference on Mechatronics & Automation. IEEE, 921-926, 2019.</p>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="publication-item">
+          <!-- 更多2021年以前的文章 -->
+          <p style="margin-bottom: 5px; font-size: 16px;">Li Haiyuan, Wang Tianmiao, Gregory Chirikjian. Simultaneous Hand-Eye and Robot-World Calibration by Solving the AX=YB Problem without Correspondence [J]. IEEE Robotics and Automation Letters, 1(1): 145-152, 2016. <a href="https://ieeexplore.ieee.org/document/7349161/" style="color: #0A4062; text-decoration: none;">[Fulltext]</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patents Section -->
+  <section class="publications-section">
+    <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">Patents</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="publication-item">
+          <p style="margin-bottom: 5px; font-size: 16px;">[[list link]](https://teacher.bupt.edu.cn/lihaiyuan/zh_CN/zlcg/201409/list/index.htm)</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
 <!--End Main Container -->
+
+<style>
+  /* Publications Section Styles */
+  .publications-section {
+    margin-bottom: 40px;
+  }
+  .publication-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  .publication-item:last-child {
+    border-bottom: none;
+  }
+  .publication-item p {
+    margin-bottom: 5px;
+  }
+
+  /* 悬停效果 */
+  .publication-item:hover {
+    background-color: #f5f5f5;
+  }
+
+  /* 链接样式 */
+  .publication-item a {
+    color: #0A4062;
+    text-decoration: none;
+  }
+
+  .publication-item a:hover {
+    color: #007E7D;
+  }
+
+  /* 图片样式 */
+  .publication-item img {
+    width: 100%;
+    border-radius: 5px;
+  }
+</style>
