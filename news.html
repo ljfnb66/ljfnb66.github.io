@@ -126,3 +126,17 @@ permalink: /news
     cursor: pointer;
   }
 </style>
+
+<!-- JS代码：平滑滚动功能 -->
+<script>
+  // 为每个锚点链接添加平滑滚动效果
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault(); // 阻止默认行为（直接跳转到锚点）
+      const targetId = this.getAttribute('href'); // 获取锚点链接的目标ID
+      document.querySelector(targetId).scrollIntoView({ // 获取目标元素并滚动到其位置
+        behavior: 'smooth' // 平滑滚动效果
+      });
+    });
+  });
+</script>
