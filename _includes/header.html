@@ -27,7 +27,6 @@
           <p style="font-size: 10px;">Intelligent Robot With Creativity And Application</p>
         </div>
       </a>   
-
     </div>
 
     <!-- 导航链接部分 -->
@@ -70,6 +69,9 @@
     padding: 15px 0; /* 内边距 */
     border-radius: 0; /* 移除圆角 */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 添加阴影 */
+    width: 100%; /* 占满整个宽度 */
+    display: flex;
+    justify-content: space-between; /* 左右对齐 */
   }
 
   /* 左侧Logo和文字容器 */
@@ -77,6 +79,7 @@
     display: flex;
     align-items: center; /* 垂直居中 */
     padding: 0; /* 移除默认内边距 */
+    max-width: 300px; /* 设置最大宽度，确保不占用过多空间 */
   }
 
   /* Logo图片样式 */
@@ -94,14 +97,12 @@
 
   /* 上部分文字样式 */
   .lab-name {
-    /* color: #800000; 深红色 */
     color: #0A4062; /*深蓝色*/
     font-weight: bold; /* 加粗 */
     font-size: 24px; /* 字体大小 */
     margin-bottom: 3px; /* 与下部分文字的间距 */
     text-decoration: none; /* 移除链接下划线 */
   }
-
 
   /* 下部分文字样式 */
   .lab-description {
@@ -112,11 +113,11 @@
     margin-top: 2px; /* 减小与上部分文字的距离 */
   }
 
-   /* 右侧导航菜单项 */
-   .navbar-nav {
+  /* 右侧导航菜单项 */
+  .navbar-nav {
     display: flex;
     justify-content: flex-end; /* 右对齐导航项 */
-    width: 100%; /* 占满剩余空间 */
+    width: calc(100% - 300px); /* 预留足够空间给Logo和文字部分 */
   }
 
   /* 右侧导航菜单项 */
@@ -132,6 +133,8 @@
   .navbar-nav li.active a {
     color: #0A4062; /*深蓝色*/
     font-weight: normal; /* 字体粗细 */
+    background-color: #5F9EA0; /* 添加背景颜色 */
+    border-radius: 4px; /* 添加圆角 */
   }
 
   /* 悬停效果 */
