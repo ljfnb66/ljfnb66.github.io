@@ -2,9 +2,9 @@
 layout: default_style
 permalink: /research
 ---
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,89 +14,112 @@ permalink: /research
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
-
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .research-theme {
-            background: #fff;
+        .header {
+            background-color: #f8f8f8;
             padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .research-theme img {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
-        .research-theme h2 {
-            margin: 10px 0;
-            color: #333;
-        }
-
-        .research-theme p {
             text-align: center;
-            margin-bottom: 20px;
         }
-
-        .button {
-            display: inline-block;
-            color: white;
-            background-color: #a00;
-            padding: 10px 30px;
-            border-radius: 25px;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .section {
+            flex: 1 1 300px;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
             text-decoration: none;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px;
+        }
+        .section.reverse img {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+        .section-content {
+            flex: 1;
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        .section a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
             transition: background-color 0.3s;
         }
-
-        .button:hover {
-            background-color: #008080;
+        .section a:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            background-color: #f8f8f8;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
+
+    <div class="header">
         <h1>Research Themes</h1>
-        <div class="research-theme">
-            <img src="assets/img/IRES_research/research1.png" alt="Research Image 1">
-            <h2><a href="secondary_menu/research/research1.html">Image-Guided Navigated Interventions</a></h2>
-            <p>Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical
-                procedures.</p>
-            <a href="secondary_menu/research/research1.html" class="button">See Details</a>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <a href="secondary_menu/research/research1.html">
+                <img src="assets/img/IRES_research/research1.png" alt="Image-Guided Navigated Interventions">
+                <div class="section-content">
+                    <h2>Image-Guided Navigated Interventions</h2>
+                    <p>Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical procedures across fields like cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient outcomes.</p>
+                    <a href="secondary_menu/research/research1.html" class="details-button">See Details</a>
+                </div>
+            </a>
         </div>
-        <div class="research-theme">
-            <img src="assets/img/IRES_research/research1.png" alt="Research Image 2">
-            <h2><a href="secondary_menu/research/research2.html">Training and Skill Assessment for Image-Guided Interventions</a></h2>
-            <p>Medical education has shifted to competency-based learning, where training focuses on skill proficiency.
-            </p>
-            <a href="secondary_menu/research/research2.html" class="button">See Details</a>
+
+        <div class="section">
+            <a href="secondary_menu/research/research1.html">
+                <img src="assets/img/IRES_research/research1.png" alt="Image-Guided Navigated Interventions">
+                <div class="section-content">
+                    <h2>Image-Guided Navigated Interventions</h2>
+                    <p>Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical procedures across fields like cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient outcomes.</p>
+                    <a href="secondary_menu/research/research1.html" class="details-button">See Details</a>
+                </div>
+            </a>
         </div>
-        <div class="research-theme">
-            <img src="assets/img/IRES_research/research1.png" alt="Research Image 3">
-            <h2><a href="secondary_menu/research/research3.html">Machine and Deep Learning Applications in Medical Imaging</a></h2>
-            <p>Artificial intelligence has transformed medical imaging, quickly and accurately analyzing large amounts
-                of data.</p>
-            <a href="secondary_menu/research/research3.html" class="button">See Details</a>
+
+        <div class="section">
+            <a href="secondary_menu/research/research1.html">
+                <img src="assets/img/IRES_research/research1.png" alt="Image-Guided Navigated Interventions">
+                <div class="section-content">
+                    <h2>Image-Guided Navigated Interventions</h2>
+                    <p>Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical procedures across fields like cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient outcomes.</p>
+                    <a href="secondary_menu/research/research1.html" class="details-button">See Details</a>
+                </div>
+            </a>
         </div>
     </div>
-</body>
 
+    <div class="footer">
+        <p>Copyright © 2025 Your Lab</p>
+    </div>
+
+</body>
 </html>
