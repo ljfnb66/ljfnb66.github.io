@@ -1,7 +1,7 @@
 <!-- Header -->
 <nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
   <div class="container">
-
+  
     <!-- 导航栏内容 -->
 
     <!-- 导航栏头部 -->
@@ -38,21 +38,18 @@
           <a href="/about.html">About</a>
         </li>
         <li class="dropdown">
-          <a href="/research.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">
+          <a href="/research.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             Research <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><a href="../secondary_menu/research/research1.html">Image-Guided Navigated Interventions</a></li>
-            <li><a href="../secondary_menu/research/research2.html">Training and skill assessment for image-guided
-                interventions</a></li>
-            <li><a href="../secondary_menu/research/research3.html">Machine and deep learning applications in medical
-                imaging</a></li>
+            <li><a href="../secondary_menu/research/research2.html">Training and skill assessment for image-guided interventions</a></li>
+            <li><a href="../secondary_menu/research/research3.html">Machine and deep learning applications in medical imaging</a></li>
             <li><a href="../secondary_menu/research/research4.html">Open-Source Research Tools</a></li>
           </ul>
         </li>
         <li>
-          <a href="/publication.html">Publications</a>
+          <a href="/blog.html">Publications</a>
         </li>
         <li>
           <a href="/team.html">Team</a>
@@ -221,8 +218,7 @@
     /* 圆角 */
     min-width: 160px;
     /* 设置最小宽度 */
-    z-index: 1000;
-    /* 确保下拉菜单在最上层 */
+    z-index: 1000; /* 确保下拉菜单在最上层 */
   }
 
   .dropdown:hover .dropdown-menu {
@@ -268,4 +264,12 @@
   @media (max-width: 768px) {
     .lab-text {
       display: none;
-      /* 在小屏幕上隐藏
+      /* 在小屏幕上隐藏文字 */
+    }
+
+    .navbar-nav {
+      margin-top: 10px;
+      /* 移动设备上菜单的间距 */
+    }
+  }
+</style>
