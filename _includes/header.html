@@ -52,7 +52,7 @@
           </ul>
         </li>
         <li>
-          <a href="/blog.html">Publications</a>
+          <a href="/publication.html">Publications</a>
         </li>
         <li>
           <a href="/team.html">Team</a>
@@ -221,6 +221,8 @@
     /* 圆角 */
     min-width: 160px;
     /* 设置最小宽度 */
+    z-index: 1000;
+    /* 确保下拉菜单在最上层 */
   }
 
   .dropdown:hover .dropdown-menu {
@@ -266,12 +268,4 @@
   @media (max-width: 768px) {
     .lab-text {
       display: none;
-      /* 在小屏幕上隐藏文字 */
-    }
-
-    .navbar-nav {
-      margin-top: 10px;
-      /* 移动设备上菜单的间距 */
-    }
-  }
-</style>
+      /* 在小屏幕上隐藏
