@@ -1,7 +1,7 @@
 <!-- Header -->
 <nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
   <div class="container">
-  
+
     <!-- 导航栏内容 -->
 
     <!-- 导航栏头部 -->
@@ -26,7 +26,7 @@
           <!-- <div class="lab-description">Intelligent Robot With Creativity And Application</div> -->
           <!-- <p style="font-size: 10px;">Intelligent Robot With Creativity And Application</p> -->
         </div>
-      </a>   
+      </a>
     </div>
 
     <!-- 导航链接部分 -->
@@ -40,8 +40,15 @@
         <li>
           <a href="/about.html">About</a>
         </li>
-         <li>
-          <a href="/research.html">Research</a>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="false">Research <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="../secondary_menu/research/research1.html">Image-Guided Navigated Interventions</a></li>
+            <li><a href="../secondary_menu/research/research2.html">Training and skill assessment for image-guided interventions</a></li>
+            <li><a href="../secondary_menu/research/research3.html">Machine and deep learning applications in medical imaging</a></li>
+            <li><a href="../secondary_menu/research/research4.html">Open-Source Research Tools</a></li>
+          </ul>
         </li>
         <li>
           <a href="/blog.html">Publications</a>
@@ -58,7 +65,7 @@
         <li>
           <a href="/news.html">News</a>
         </li>
-      </ul>         
+      </ul>
     </div>
   </div>
 </nav>
@@ -68,111 +75,158 @@
 <style>
   /* 导航栏样式 */
   .navbar {
-    background-color: #ffffff; /* 白色背景 */
-    padding: 15px 0; /* 内边距 */
-    border-radius: 0; /* 移除圆角 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 添加阴影 */
-    width: 100%; /* 占满整个宽度 */
+    background-color: #ffffff;
+    /* 白色背景 */
+    padding: 15px 0;
+    /* 内边距 */
+    border-radius: 0;
+    /* 移除圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 添加阴影 */
+    width: 100%;
+    /* 占满整个宽度 */
     display: flex;
-    justify-content: space-between; /* 左右对齐 */
+    justify-content: space-between;
+    /* 左右对齐 */
   }
 
   /* 左侧Logo和文字容器 */
   .navbar-brand {
     display: flex;
-    align-items: center; /* 垂直居中 */
-    padding: 0; /* 移除默认内边距 */
-    max-width: 300px; /* 设置最大宽度，确保不占用过多空间 */
+    align-items: center;
+    /* 垂直居中 */
+    padding: 0;
+    /* 移除默认内边距 */
+    max-width: 300px;
+    /* 设置最大宽度，确保不占用过多空间 */
   }
 
   /* Logo图片样式 */
   .office-logo {
-    height: 35px; /* 调整logo高度 */
-    width: 35px;;
-    margin-right: 10px; /* 与文字的间距 */
+    height: 35px;
+    /* 调整logo高度 */
+    width: 35px;
+    ;
+    margin-right: 10px;
+    /* 与文字的间距 */
   }
 
   /* 右侧文字部分 */
   .lab-text {
     display: flex;
-    flex-direction: column; /* 垂直排列文字 */
+    flex-direction: column;
+    /* 垂直排列文字 */
   }
 
   /* 上部分文字样式 */
   .lab-name {
-    color: #0A4062; /*深蓝色*/
-    font-weight: bold; /* 加粗 */
-    font-size: 24px; /* 字体大小 */
-    margin-bottom: 3px; /* 与下部分文字的间距 */
-    text-decoration: none; /* 移除链接下划线 */
+    color: #0A4062;
+    /*深蓝色*/
+    font-weight: bold;
+    /* 加粗 */
+    font-size: 24px;
+    /* 字体大小 */
+    margin-bottom: 3px;
+    /* 与下部分文字的间距 */
+    text-decoration: none;
+    /* 移除链接下划线 */
   }
 
   /* 下部分文字样式 */
   .lab-description {
-    color: #000000; /* 深黑色 */
-    font-size: 11px; /* 字体大小 */
-    text-decoration: none; /* 移除链接下划线 */
-    line-height: 1.1; /* 减小行高，使文字更紧凑 */
-    margin-top: 2px; /* 减小与上部分文字的距离 */
+    color: #000000;
+    /* 深黑色 */
+    font-size: 11px;
+    /* 字体大小 */
+    text-decoration: none;
+    /* 移除链接下划线 */
+    line-height: 1.1;
+    /* 减小行高，使文字更紧凑 */
+    margin-top: 2px;
+    /* 减小与上部分文字的距离 */
   }
 
   /* 右侧导航菜单项 */
   .navbar-nav {
     display: flex;
-    justify-content: flex-end; /* 右对齐导航项 */
-    width: calc(100% - 300px); /* 预留足够空间给Logo和文字部分 */
+    justify-content: flex-end;
+    /* 右对齐导航项 */
+    width: calc(100% - 300px);
+    /* 预留足够空间给Logo和文字部分 */
   }
 
   /* 右侧导航菜单项 */
   .navbar-nav li a {
-    color: #0A4062; /*深蓝色*/
-    font-weight: normal; /* 字体粗细 */
-    padding: 10px 15px; /* 内边距 */
-    position: relative; /* 相对定位，用于悬停效果 */
-    text-decoration: none; /* 移除链接下划线 */
+    color: #0A4062;
+    /*深蓝色*/
+    font-weight: normal;
+    /* 字体粗细 */
+    padding: 10px 15px;
+    /* 内边距 */
+    position: relative;
+    /* 相对定位，用于悬停效果 */
+    text-decoration: none;
+    /* 移除链接下划线 */
   }
 
   /* 当前活动项的样式 */
   .navbar-nav li.active a {
-    color: #0A4062; /*深蓝色*/
-    font-weight: normal; /* 字体粗细 */
-    background-color: #5F9EA0; /* 添加背景颜色 */
-    border-radius: 4px; /* 添加圆角 */
+    color: #0A4062;
+    /*深蓝色*/
+    font-weight: normal;
+    /* 字体粗细 */
+    background-color: #5F9EA0;
+    /* 添加背景颜色 */
+    border-radius: 4px;
+    /* 添加圆角 */
   }
 
   /* 悬停效果 */
   .navbar-nav li a:hover {
-    color: #0A4062; /* 悬停时文字颜色 */
-    text-decoration: underline; /* 添加下划线 */
+    color: #0A4062;
+    /* 悬停时文字颜色 */
+    text-decoration: underline;
+    /* 添加下划线 */
   }
 
   .navbar-nav li a:hover::after {
-    content: ""; /* 添加伪元素 */
+    content: "";
+    /* 添加伪元素 */
     position: absolute;
-    bottom: 0; /* 定位在底部 */
+    bottom: 0;
+    /* 定位在底部 */
     left: 0;
-    width: 100%; /* 宽度与文字相同 */
-    height: 3px; /* 线的高度 */
-    color: #0A4062; /*深蓝色*/
+    width: 100%;
+    /* 宽度与文字相同 */
+    height: 3px;
+    /* 线的高度 */
+    color: #0A4062;
+    /*深蓝色*/
   }
 
   /* 折叠按钮样式 */
   .navbar-toggle {
-    border: none; /* 移除边框 */
-    background: none; /* 透明背景 */
+    border: none;
+    /* 移除边框 */
+    background: none;
+    /* 透明背景 */
   }
 
   .navbar-toggle .icon-bar {
-    background-color: #666666; /* 调整横线颜色 */
+    background-color: #666666;
+    /* 调整横线颜色 */
   }
 
   /* 响应式调整 */
   @media (max-width: 768px) {
     .lab-text {
-      display: none; /* 在小屏幕上隐藏文字 */
+      display: none;
+      /* 在小屏幕上隐藏文字 */
     }
+
     .navbar-nav {
-      margin-top: 10px; /* 移动设备上菜单的间距 */
+      margin-top: 10px;
+      /* 移动设备上菜单的间距 */
     }
   }
 </style>

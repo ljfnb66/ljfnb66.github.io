@@ -14,50 +14,59 @@ permalink: /research
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f8f9fa;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         h1 {
             text-align: center;
-            color: #2c3e50;
-            margin-bottom: 30px;
+            color: #333;
+            margin: 40px 0;
         }
 
-        .research-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .research-item {
-            background-color: white;
+        .research-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            background-color: #fff;
+            padding: 30px;
             border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .research-section:nth-child(even) {
+            flex-direction: row-reverse;
         }
 
         .research-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
+            flex: 1;
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
+            margin: 0 30px;
+            cursor: pointer;
+        }
+
+        .research-content {
+            flex: 1;
+            padding: 0 30px;
+        }
+
+        .research-title {
+            font-size: 24px;
+            color: #c0392b; /* 红色标题，与按钮一致 */
             margin-bottom: 15px;
             cursor: pointer;
         }
 
-        .research-title {
-            font-size: 1.2em;
-            color: #2980b9;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
         .research-desc {
-            color: #7f8c8d;
-            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
         }
 
         .details-btn {
@@ -73,34 +82,53 @@ permalink: /research
         .details-btn:hover {
             background-color: #2980b9; /* 悬停蓝色 */
         }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .research-section,
+            .research-section:nth-child(even) {
+                flex-direction: column;
+            }
+            .research-image {
+                max-width: 100%;
+                margin: 0 0 30px 0;
+            }
+        }
     </style>
 </head>
 <body>
-    <h1>Research Themes</h1>
-    <div class="research-container">
-        <!-- 第一个研究方向 -->
-        <article class="research-item">
-            <img src="assets/img/IRES_research/research1.png" alt="Research 1" class="research-image" onclick="location.href='research1.html';">
-            <a href="research1.html" class="research-title">Research Topic 1</a>
-            <p class="research-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="details1.html" class="details-btn">See Details</a>
-        </article>
+    <div class="container">
+        <h1>Research Themes</h1>
 
-        <!-- 第二个研究方向 -->
-        <article class="research-item">
-            <img src="assets/img/IRES_research/research1.png" alt="Research 2" class="research-image" onclick="location.href='research2.html';">
-            <a href="research2.html" class="research-title">Research Topic 2</a>
-            <p class="research-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <a href="details2.html" class="details-btn">See Details</a>
-        </article>
+        <!-- 第一个研究方向：左图右文 -->
+        <div class="research-section">
+            <img src="assets/img/IRES_research/research1.png" alt="Image-Guided Interventions" class="research-image" onclick="location.href='research1.html';">
+            <div class="research-content">
+                <h2 class="research-title">Image-Guided Navigated Interventions</h2>
+                <p class="research-desc">Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical procedures across fields like cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient outcomes. We integrate technologies like ultrasound machines, position trackers, and navigation displays to enhance procedural precision.</p>
+                <a href="secondary_menu/research/research1.html" class="details-btn">See Details</a>
+            </div>
+        </div>
 
-        <!-- 第三个研究方向 -->
-        <article class="research-item">
-            <img src="assets/img/IRES_research/research3.png" alt="Research 3" class="research-image" onclick="location.href='research3.html';">
-            <a href="research3.html" class="research-title">Research Topic 3</a>
-            <p class="research-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <a href="details3.html" class="details-btn">See Details</a>
-        </article>
+        <!-- 第二个研究方向：左文右图 -->
+        <div class="research-section">
+            <div class="research-content">
+                <h2 class="research-title">Training and Skill Assessment for Image-Guided Interventions</h2>
+                <p class="research-desc">Medical education has shifted to competency-based learning. Our lab collaborates with the Faculty of Health Sciences to develop simulation-based curricula using tools like EM trackers, ultrasound phantoms, and surgical simulators. This improves student skill proficiency and has earned international recognition for advancing medical education through technology-integrated training systems.</p>
+                <a href="secondary_menu/research/research2.html" class="details-btn">See Details</a>
+            </div>
+            <img src="assets/img/IRES_research/research1.png" alt="Training Systems" class="research-image" onclick="location.href='research2.html';">
+        </div>
+
+        <!-- 第三个研究方向（可扩展）：左图右文 -->
+        <div class="research-section">
+            <img src="assets/img/IRES_research/research1.png" alt="AI in Medical Imaging" class="research-image" onclick="location.href='research3.html';">
+            <div class="research-content">
+                <h2 class="research-title">Machine Learning in Medical Imaging</h2>
+                <p class="research-desc">Leveraging AI to analyze medical images (MRI, CT, ultrasound) for early disease detection. Our work includes developing deep learning models to identify subtle abnormalities, integrating these into clinical workflows, and creating AI-augmented training systems to enhance diagnostic skill development in medical professionals.</p>
+                <a href="secondary_menu/research/research3.html" class="details-btn">See Details</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
