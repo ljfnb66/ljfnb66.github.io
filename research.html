@@ -2,7 +2,6 @@
 layout: default_style
 permalink: /research
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,91 +13,61 @@ permalink: /research
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f4f4f4;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
 
         h1 {
             text-align: center;
-            color: #333;
-            margin: 40px 0;
+            margin: 20px 0;
         }
 
-        .research-section {
+        .research-theme {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 60px;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .research-section:nth-child(even) {
-            flex-direction: row-reverse;
+        .research-theme img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 5px;
+            margin-bottom: 10px;
         }
 
-        .research-image {
-            flex: 1;
-            max-width: 50%;
-            height: auto;
-            border-radius: 8px;
-            margin: 0 30px;
-            cursor: pointer;
+        .research-theme h2 {
+            margin: 10px 0;
+            color: #333;
         }
 
-        .research-content {
-            flex: 1;
-            padding: 0 30px;
+        .research-theme p {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        .research-title {
-            font-size: 24px;
-            color: #c0392b;
-            /* 红色标题，与按钮一致 */
-            margin-bottom: 15px;
-            cursor: pointer;
-        }
-
-        .research-desc {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .details-btn {
+        .button {
             display: inline-block;
-            padding: 12px 30px;
-            background-color: #c0392b;
-            /* 初始红色 */
             color: white;
-            text-decoration: none;
+            background-color: #a00;
+            padding: 10px 30px;
             border-radius: 25px;
-            transition: background-color 0.3s ease;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
 
-        .details-btn:hover {
-            background-color: #2980b9;
-            /* 悬停蓝色 */
-        }
-
-        /* 移动端适配 */
-        @media (max-width: 768px) {
-
-            .research-section,
-            .research-section:nth-child(even) {
-                flex-direction: column;
-            }
-
-            .research-image {
-                max-width: 100%;
-                margin: 0 0 30px 0;
-            }
+        .button:hover {
+            background-color: #008080;
         }
     </style>
 </head>
@@ -106,47 +75,26 @@ permalink: /research
 <body>
     <div class="container">
         <h1>Research Themes</h1>
-
-        <!-- 第一个研究方向：左图右文 -->
-        <div class="research-section">
-            <img src="assets/img/IRES_research/navigation_ultrasound.png" alt="Image-Guided Interventions"
-                class="research-image" onclick="location.href='research1.html';">
-            <div class="research-content">
-                <h2 class="research-title">Image-Guided Navigated Interventions</h2>
-                <p class="research-desc">Our research focuses on using advanced imaging and navigation systems
-                    (ultrasound, EM trackers, navigation displays) to improve the accuracy of medical procedures in
-                    cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient
-                    outcomes.</p>
-                <a href="secondary_menu/research/research1.html" class="details-btn">See Details</a>
-            </div>
+        <div class="research-theme">
+            <img src="assets/img/IRES_research/research1.png" alt="Research Image 1">
+            <h2><a href="secondary_menu/research/research1.html">Image-Guided Navigated Interventions</a></h2>
+            <p>Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical
+                procedures.</p>
+            <a href="secondary_menu/research/research1.html" class="button">See Details</a>
         </div>
-
-        <!-- 第二个研究方向：左文右图（包含3D超声对比图） -->
-        <div class="research-section">
-            <div class="research-content">
-                <h2 class="research-title">Training and Skill Assessment for Image-Guided Interventions</h2>
-                <p class="research-desc">Medical education has shifted to competency-based learning. Our lab
-                    collaborates with the Faculty of Health Sciences to develop simulation-based curricula using EM
-                    trackers, ultrasound phantoms, and surgical simulators. This approach improves student skill
-                    proficiency and has earned international recognition for advancing medical education.</p>
-                <a href="secondary_menu/research/research2.html" class="details-btn">See Details</a>
-            </div>
-            <img src="assets/img/IRES_research/bone_ultrasound_vs_ct.png" alt="Bone-enhanced 3D Ultrasound vs. CT"
-                class="research-image" onclick="location.href='research2.html';">
+        <div class="research-theme">
+            <img src="assets/img/IRES_research/research1.png" alt="Research Image 2">
+            <h2><a href="secondary_menu/research/research2.html">Training and Skill Assessment for Image-Guided Interventions</a></h2>
+            <p>Medical education has shifted to competency-based learning, where training focuses on skill proficiency.
+            </p>
+            <a href="secondary_menu/research/research2.html" class="button">See Details</a>
         </div>
-
-        <!-- 第三个研究方向：左图右文（修正标题） -->
-        <div class="research-section">
-            <img src="assets/img/IRES_research/ai_medical_imaging.png" alt="AI in Medical Imaging"
-                class="research-image" onclick="location.href='research3.html';">
-            <div class="research-content">
-                <h2 class="research-title">Machine and Deep Learning Applications in Medical Imaging</h2>
-                <p class="research-desc">Artificial intelligence transforms medical imaging by quickly analyzing
-                    ultrasound, MRI, and CT scans to detect subtle abnormalities for early disease detection. We develop
-                    AI solutions and integrate them into procedural guidance and training systems to enhance healthcare
-                    diagnostics.</p>
-                <a href="secondary_menu/research/research3.html" class="details-btn">See Details</a>
-            </div>
+        <div class="research-theme">
+            <img src="assets/img/IRES_research/research1.png" alt="Research Image 3">
+            <h2><a href="secondary_menu/research/research3.html">Machine and Deep Learning Applications in Medical Imaging</a></h2>
+            <p>Artificial intelligence has transformed medical imaging, quickly and accurately analyzing large amounts
+                of data.</p>
+            <a href="secondary_menu/research/research3.html" class="button">See Details</a>
         </div>
     </div>
 </body>
