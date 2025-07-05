@@ -5,6 +5,7 @@ permalink: /research
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +36,7 @@ permalink: /research
             background-color: #fff;
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .research-section:nth-child(even) {
@@ -58,7 +59,8 @@ permalink: /research
 
         .research-title {
             font-size: 24px;
-            color: #c0392b; /* 红色标题，与按钮一致 */
+            color: #c0392b;
+            /* 红色标题，与按钮一致 */
             margin-bottom: 15px;
             cursor: pointer;
         }
@@ -72,7 +74,8 @@ permalink: /research
         .details-btn {
             display: inline-block;
             padding: 12px 30px;
-            background-color: #c0392b; /* 初始红色 */
+            background-color: #c0392b;
+            /* 初始红色 */
             color: white;
             text-decoration: none;
             border-radius: 25px;
@@ -80,15 +83,18 @@ permalink: /research
         }
 
         .details-btn:hover {
-            background-color: #2980b9; /* 悬停蓝色 */
+            background-color: #2980b9;
+            /* 悬停蓝色 */
         }
 
         /* 移动端适配 */
         @media (max-width: 768px) {
+
             .research-section,
             .research-section:nth-child(even) {
                 flex-direction: column;
             }
+
             .research-image {
                 max-width: 100%;
                 margin: 0 0 30px 0;
@@ -96,39 +102,53 @@ permalink: /research
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Research Themes</h1>
 
         <!-- 第一个研究方向：左图右文 -->
         <div class="research-section">
-            <img src="assets/img/IRES_research/research1.png" alt="Image-Guided Interventions" class="research-image" onclick="location.href='research1.html';">
+            <img src="assets/img/IRES_research/navigation_ultrasound.png" alt="Image-Guided Interventions"
+                class="research-image" onclick="location.href='research1.html';">
             <div class="research-content">
                 <h2 class="research-title">Image-Guided Navigated Interventions</h2>
-                <p class="research-desc">Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical procedures across fields like cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient outcomes. We integrate technologies like ultrasound machines, position trackers, and navigation displays to enhance procedural precision.</p>
+                <p class="research-desc">Our research focuses on using advanced imaging and navigation systems
+                    (ultrasound, EM trackers, navigation displays) to improve the accuracy of medical procedures in
+                    cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient
+                    outcomes.</p>
                 <a href="secondary_menu/research/research1.html" class="details-btn">See Details</a>
             </div>
         </div>
 
-        <!-- 第二个研究方向：左文右图 -->
+        <!-- 第二个研究方向：左文右图（包含3D超声对比图） -->
         <div class="research-section">
             <div class="research-content">
                 <h2 class="research-title">Training and Skill Assessment for Image-Guided Interventions</h2>
-                <p class="research-desc">Medical education has shifted to competency-based learning. Our lab collaborates with the Faculty of Health Sciences to develop simulation-based curricula using tools like EM trackers, ultrasound phantoms, and surgical simulators. This improves student skill proficiency and has earned international recognition for advancing medical education through technology-integrated training systems.</p>
+                <p class="research-desc">Medical education has shifted to competency-based learning. Our lab
+                    collaborates with the Faculty of Health Sciences to develop simulation-based curricula using EM
+                    trackers, ultrasound phantoms, and surgical simulators. This approach improves student skill
+                    proficiency and has earned international recognition for advancing medical education.</p>
                 <a href="secondary_menu/research/research2.html" class="details-btn">See Details</a>
             </div>
-            <img src="assets/img/IRES_research/research1.png" alt="Training Systems" class="research-image" onclick="location.href='research2.html';">
+            <img src="assets/img/IRES_research/bone_ultrasound_vs_ct.png" alt="Bone-enhanced 3D Ultrasound vs. CT"
+                class="research-image" onclick="location.href='research2.html';">
         </div>
 
-        <!-- 第三个研究方向（可扩展）：左图右文 -->
+        <!-- 第三个研究方向：左图右文（修正标题） -->
         <div class="research-section">
-            <img src="assets/img/IRES_research/research1.png" alt="AI in Medical Imaging" class="research-image" onclick="location.href='research3.html';">
+            <img src="assets/img/IRES_research/ai_medical_imaging.png" alt="AI in Medical Imaging"
+                class="research-image" onclick="location.href='research3.html';">
             <div class="research-content">
-                <h2 class="research-title">Machine Learning in Medical Imaging</h2>
-                <p class="research-desc">Leveraging AI to analyze medical images (MRI, CT, ultrasound) for early disease detection. Our work includes developing deep learning models to identify subtle abnormalities, integrating these into clinical workflows, and creating AI-augmented training systems to enhance diagnostic skill development in medical professionals.</p>
+                <h2 class="research-title">Machine and Deep Learning Applications in Medical Imaging</h2>
+                <p class="research-desc">Artificial intelligence transforms medical imaging by quickly analyzing
+                    ultrasound, MRI, and CT scans to detect subtle abnormalities for early disease detection. We develop
+                    AI solutions and integrate them into procedural guidance and training systems to enhance healthcare
+                    diagnostics.</p>
                 <a href="secondary_menu/research/research3.html" class="details-btn">See Details</a>
             </div>
         </div>
     </div>
 </body>
+
 </html>

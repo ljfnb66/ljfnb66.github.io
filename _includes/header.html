@@ -22,9 +22,6 @@
         <div class="lab-text">
           <!-- 上部分文字 -->
           <div class="lab-name">IRES Lab</div>
-          <!-- 下部分文字 -->
-          <!-- <div class="lab-description">Intelligent Robot With Creativity And Application</div> -->
-          <!-- <p style="font-size: 10px;">Intelligent Robot With Creativity And Application</p> -->
         </div>
       </a>
     </div>
@@ -41,12 +38,16 @@
           <a href="/about.html">About</a>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">Research <span class="caret"></span></a>
+          <a href="/research.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+            aria-expanded="false">
+            Research <span class="caret"></span>
+          </a>
           <ul class="dropdown-menu">
             <li><a href="../secondary_menu/research/research1.html">Image-Guided Navigated Interventions</a></li>
-            <li><a href="../secondary_menu/research/research2.html">Training and skill assessment for image-guided interventions</a></li>
-            <li><a href="../secondary_menu/research/research3.html">Machine and deep learning applications in medical imaging</a></li>
+            <li><a href="../secondary_menu/research/research2.html">Training and skill assessment for image-guided
+                interventions</a></li>
+            <li><a href="../secondary_menu/research/research3.html">Machine and deep learning applications in medical
+                imaging</a></li>
             <li><a href="../secondary_menu/research/research4.html">Open-Source Research Tools</a></li>
           </ul>
         </li>
@@ -106,7 +107,6 @@
     height: 35px;
     /* 调整logo高度 */
     width: 35px;
-    ;
     margin-right: 10px;
     /* 与文字的间距 */
   }
@@ -130,20 +130,6 @@
     /* 与下部分文字的间距 */
     text-decoration: none;
     /* 移除链接下划线 */
-  }
-
-  /* 下部分文字样式 */
-  .lab-description {
-    color: #000000;
-    /* 深黑色 */
-    font-size: 11px;
-    /* 字体大小 */
-    text-decoration: none;
-    /* 移除链接下划线 */
-    line-height: 1.1;
-    /* 减小行高，使文字更紧凑 */
-    margin-top: 2px;
-    /* 减小与上部分文字的距离 */
   }
 
   /* 右侧导航菜单项 */
@@ -215,6 +201,65 @@
   .navbar-toggle .icon-bar {
     background-color: #666666;
     /* 调整横线颜色 */
+  }
+
+  /* 二级菜单样式 */
+  .dropdown-menu {
+    display: none;
+    /* 默认隐藏二级菜单 */
+    position: absolute;
+    /* 绝对定位 */
+    top: 100%;
+    /* 位于父元素下方 */
+    left: 0;
+    /* 左对齐 */
+    background-color: #ffffff;
+    /* 白色背景 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 添加阴影 */
+    border-radius: 4px;
+    /* 圆角 */
+    min-width: 160px;
+    /* 设置最小宽度 */
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    /* 悬停时显示二级菜单 */
+  }
+
+  .dropdown-menu li {
+    padding: 10px 15px;
+    /* 内边距 */
+  }
+
+  .dropdown-menu li a {
+    color: #0A4062;
+    /*深蓝色*/
+    font-weight: normal;
+    /* 字体粗细 */
+    text-decoration: none;
+    /* 移除链接下划线 */
+  }
+
+  .dropdown-menu li a:hover {
+    color: #0A4062;
+    /* 悬停时文字颜色 */
+    text-decoration: underline;
+    /* 添加下划线 */
+  }
+
+  /* 小三角标志样式 */
+  .caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
   }
 
   /* 响应式调整 */
