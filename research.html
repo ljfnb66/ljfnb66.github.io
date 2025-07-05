@@ -1,0 +1,106 @@
+---
+layout: default_style
+permalink: /research
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Themes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        .research-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .research-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .research-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .research-title {
+            font-size: 1.2em;
+            color: #2980b9;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .research-desc {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .details-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #c0392b; /* 初始红色 */
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        .details-btn:hover {
+            background-color: #2980b9; /* 悬停蓝色 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Research Themes</h1>
+    <div class="research-container">
+        <!-- 第一个研究方向 -->
+        <article class="research-item">
+            <img src="assets/img/IRES_research/research1.png" alt="Research 1" class="research-image" onclick="location.href='research1.html';">
+            <a href="research1.html" class="research-title">Research Topic 1</a>
+            <p class="research-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="details1.html" class="details-btn">See Details</a>
+        </article>
+
+        <!-- 第二个研究方向 -->
+        <article class="research-item">
+            <img src="assets/img/IRES_research/research1.png" alt="Research 2" class="research-image" onclick="location.href='research2.html';">
+            <a href="research2.html" class="research-title">Research Topic 2</a>
+            <p class="research-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <a href="details2.html" class="details-btn">See Details</a>
+        </article>
+
+        <!-- 第三个研究方向 -->
+        <article class="research-item">
+            <img src="assets/img/IRES_research/research3.png" alt="Research 3" class="research-image" onclick="location.href='research3.html';">
+            <a href="research3.html" class="research-title">Research Topic 3</a>
+            <p class="research-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <a href="details3.html" class="details-btn">See Details</a>
+        </article>
+    </div>
+</body>
+</html>
