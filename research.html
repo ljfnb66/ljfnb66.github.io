@@ -2,181 +2,414 @@
 layout: default_style
 permalink: /research
 ---
+
+
 <!DOCTYPE html>
-<html lang="en">
-<div class="container">
-    <main class="flex-grow">
-        <!-- 主题区域 -->
-        <section class="relative bg-gradient-to-br from-primary/5 to-primary/10 py-16 md:py-24 overflow-hidden">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-neutral-700 leading-tight mb-6">
-                        Research Themes
-                    </h1>
-                    <p class="text-[clamp(1rem,2vw,1.25rem)] text-neutral-500 mb-8 text-balance">
-                        Advancing medical technology through innovative research and development in imaging, navigation, and artificial intelligence.
-                    </p>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Themes - IRES Lab</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0A4062;
+            --secondary-color: #007E7D;
+            --accent-color: #c50000;
+            --accent-hover: #0077b6;
+            --light-bg: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+        }
+        
+        .page-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 70px 0 50px;
+            margin-bottom: 50px;
+        }
+        
+        .page-title {
+            font-weight: 500;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .research-theme {
+            margin-bottom: 80px;
+            padding: 30px 0;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .research-theme:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+        
+        .theme-img-container {
+            height: 350px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .theme-img-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .theme-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .theme-img-container:hover .theme-img {
+            transform: scale(1.05);
+        }
+        
+        .theme-content {
+            padding: 20px;
+        }
+        
+        .theme-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            transition: color 0.3s;
+        }
+        
+        .theme-title:hover {
+            color: var(--accent-color);
+            cursor: pointer;
+        }
+        
+        .theme-description {
+            color: #555;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .btn-details {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .btn-details:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
+        }
+        
+        .btn-details i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-details:hover i {
+            transform: translateX(5px);
+        }
+        
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            margin: 40px 0;
+            border: none;
+        }
+        
+        .icon-feature {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .feature-text {
+            color: #666;
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+        
+        .footer-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .theme-img-container {
+                height: 250px;
+                margin-bottom: 25px;
+            }
+            
+            .theme-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 页面头部 -->
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="page-title">Research Themes</h1>
+            <p class="lead">探索前沿研究领域，推动科技创新</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 研究主题 1 -->
+        <section class="research-theme">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="theme-img-container">
+                        <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Image-Guided Navigated Interventions" class="theme-img">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="theme-content">
+                        <h2 class="theme-title">Image-Guided Navigated Interventions</h2>
+                        <p class="theme-description">
+                            我们的研究专注于利用先进的成像和导航系统来提高医学程序的准确性，涵盖心脏病学、乳腺癌、放射治疗和虚拟现实等领域，从而改善患者的治疗效果。通过精确的图像引导，我们能够实现微创手术的更高精度，减少并发症，并加快患者康复。
+                        </p>
+                        <button class="btn btn-details">
+                            See Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <!-- 研究方向卡片区域 -->
-        <section class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- 修改为一行一行排布，交替左右布局 -->
-                <div class="flex flex-col gap-12 md:gap-16">
-                    <!-- 研究方向 1: Image-Guided Navigated Interventions -->
-                    <div class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover flex flex-col md:flex-row">
-                        <!-- 图片区域 -->
-                        <div class="relative overflow-hidden aspect-[16/9] md:w-1/2">
-                            <a href="/secondary_menu/research/research1.html" class="block w-full h-full">
-                                <img src="assets/img/IRES_research/navigation_system.jpg" 
-                                    alt="Image-Guided Navigated Interventions"
-                                    class="w-full h-full object-cover transition-custom group-hover:scale-105">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-custom flex items-end p-6">
-                                    <span class="text-white font-medium">View Image</span>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <!-- 内容区域 -->
-                        <div class="p-6 md:w-1/2 flex flex-col justify-center">
-                            <h2 class="text-xl md:text-2xl font-bold text-neutral-700 mb-4 group-hover:text-primary transition-custom">
-                                <a href="/secondary_menu/research/research1.html" class="hover:underline">Image-Guided Navigated Interventions</a>
-                            </h2>
-                            <p class="text-neutral-500 mb-6 leading-relaxed">
-                                Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical procedures across fields like cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient outcomes.
-                            </p>
-                            <!-- 详情按钮 -->
-                            <a href="/secondary_menu/research/research1.html"
-                                class="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white font-medium rounded-lg transition-custom hover:bg-primary hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>See Details</span>
-                                <i class="fa fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
+
+        <hr class="section-divider">
+
+        <!-- 研究主题 2 -->
+        <section class="research-theme">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <div class="theme-img-container">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Training and Skill Assessment for Image-Guided Interventions" class="theme-img">
                     </div>
-                    
-                    <!-- 研究方向 2: Training and Skill Assessment -->
-                    <div class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover flex flex-col md:flex-row-reverse">
-                        <!-- 图片区域 -->
-                        <div class="relative overflow-hidden aspect-[16/9] md:w-1/2">
-                            <a href="/secondary_menu/research/research2.html" class="block w-full h-full">
-                                <img src="assets/img/IRES_research/medical_training.jpg" 
-                                    alt="Training and Skill Assessment for Image-Guided Interventions"
-                                    class="w-full h-full object-cover transition-custom group-hover:scale-105">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-custom flex items-end p-6">
-                                    <span class="text-white font-medium">View Image</span>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <!-- 内容区域 -->
-                        <div class="p-6 md:w-1/2 flex flex-col justify-center">
-                            <h2 class="text-xl md:text-2xl font-bold text-neutral-700 mb-4 group-hover:text-primary transition-custom">
-                                <a href="/secondary_menu/research/research2.html" class="hover:underline">Training and Skill Assessment for Image-Guided Interventions</a>
-                            </h2>
-                            <p class="text-neutral-500 mb-6 leading-relaxed">
-                                Medical education has shifted to competency-based learning, where training focuses on skill proficiency rather than traditional apprenticeship. Our lab collaborates with the Faculty of Health Sciences to develop simulation-based curricula, improving student experience and earning international recognition for our contributions to medical education advancement.
-                            </p>
-                            <!-- 详情按钮 -->
-                            <a href="/secondary_menu/research/research2.html"
-                                class="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white font-medium rounded-lg transition-custom hover:bg-primary hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>See Details</span>
-                                <i class="fa fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="theme-content">
+                        <h2 class="theme-title">Training and Skill Assessment for Image-Guided Interventions</h2>
+                        <p class="theme-description">
+                            医学教育已转向基于能力的学习模式，培训重点从传统的学徒制转变为技能熟练度。我们实验室与健康科学学院合作，开发基于模拟的课程，改善学生体验，并因在医学教育进步方面的贡献而获得国际认可。通过先进的模拟技术，医学生可以在安全环境中掌握复杂的手术技能。
+                        </p>
+                        <button class="btn btn-details">
+                            See Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
-                    
-                    <!-- 研究方向 3: Machine and Deep Learning Applications -->
-                    <div class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover flex flex-col md:flex-row">
-                        <!-- 图片区域 -->
-                        <div class="relative overflow-hidden aspect-[16/9] md:w-1/2">
-                            <a href="secondary_menu/research/research3.html" class="block w-full h-full">
-                                <img src="assets/img/IRES_research/ai_medical_imaging.jpg" 
-                                    alt="Machine and Deep Learning Applications in Medical Imaging"
-                                    class="w-full h-full object-cover transition-custom group-hover:scale-105">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-custom flex items-end p-6">
-                                    <span class="text-white font-medium">View Image</span>
-                                </div>
-                            </a>
-                        </div>
-                        
-                        <!-- 内容区域 -->
-                        <div class="p-6 md:w-1/2 flex flex-col justify-center">
-                            <h2 class="text-xl md:text-2xl font-bold text-neutral-700 mb-4 group-hover:text-primary transition-custom">
-                                <a href="/secondary_menu/research/research3.html" class="hover:underline">Machine and Deep Learning Applications in Medical Imaging</a>
-                            </h2>
-                            <p class="text-neutral-500 mb-6 leading-relaxed">
-                                Artificial intelligence has transformed medical imaging, quickly and accurately analyzing large amounts of data to detect subtle abnormalities in ultrasound, MRI, and CT scans, aiding in early disease detection. Our group develops AI solutions and incorporates them into systems for guiding procedures and training, demonstrating their significant impact on healthcare diagnostics and treatment planning.
-                            </p>
-                            <!-- 详情按钮 -->
-                            <a href="/secondary_menu/research/research3.html"
-                                class="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white font-medium rounded-lg transition-custom hover:bg-primary hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-                                <span>See Details</span>
-                                <i class="fa fa-arrow-right ml-2"></i>
-                            </a>
-                        </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- 研究主题 3 -->
+        <section class="research-theme">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="theme-img-container">
+                        <img src="https://images.unsplash.com/photo-1677442135722-5f8ea49cec8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                             alt="Machine and Deep Learning Applications in Medical Imaging" class="theme-img">
                     </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="theme-content">
+                        <h2 class="theme-title">Machine and Deep Learning Applications in Medical Imaging</h2>
+                        <p class="theme-description">
+                            人工智能已经改变了医学影像领域，能够快速准确地分析大量数据，检测超声、MRI和CT扫描中的细微异常，有助于早期疾病检测。我们团队开发AI解决方案，并将其集成到用于指导程序和培训的系统中，展示了它们对医疗诊断和治疗规划的重大影响。我们的算法能够识别人眼难以察觉的病变模式，提供更准确的诊断。
+                        </p>
+                        <button class="btn btn-details">
+                            See Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- 特色功能区域 -->
+        <section class="py-5">
+            <div class="row text-center">
+                <div class="col-md-4 mb-5 mb-md-0">
+                    <div class="icon-feature">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="feature-title">前沿研究</h3>
+                    <p class="feature-text">专注于机器人技术、人工智能和医学影像的交叉领域，推动科技创新</p>
+                </div>
+                <div class="col-md-4 mb-5 mb-md-0">
+                    <div class="icon-feature">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">团队协作</h3>
+                    <p class="feature-text">跨学科团队合作，与国内外顶尖研究机构建立合作关系</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon-feature">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="feature-title">人才培养</h3>
+                    <p class="feature-text">培养下一代科学家和工程师，提供实践研究机会和指导</p>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <!-- 页脚 -->
-    <footer class="bg-neutral-700 text-white py-12">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
-                            <i class="fa fa-flask text-primary text-xl"></i>
-                        </div>
-                        <span class="text-xl font-bold">Perk Lab</span>
-                    </div>
-                    <p class="text-neutral-400 mb-4">Advancing medical research through innovation and technology.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
-                            <i class="fa fa-github"></i>
-                        </a>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">IRES Lab</h4>
+                    <p>智能机器人及控制系统研究实验室，致力于机器人的机械结构设计、运动控制硬件与软件设计、智能控制与视觉感知建模算法的研究。</p>
+                    <div class="social-links mt-4">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h4 class="footer-title">快速链接</h4>
+                    <div class="footer-links">
+                        <a href="/about">关于实验室</a>
+                        <a href="/research">研究主题</a>
+                        <a href="/publication">研究成果</a>
+                        <a href="/album">团队相册</a>
+                        <a href="/contact">联系我们</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="footer-title">联系方式</h4>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 北京市海淀区西土城路10号</p>
+                    <p><i class="fas fa-envelope me-2"></i> lihaiyuan@bupt.edu.cn</p>
+                    <p><i class="fas fa-phone me-2"></i> +86 10 6228 1234</p>
+                </div>
             </div>
-            <div class="border-t border-neutral-600 mt-10 pt-6 text-center text-neutral-500 text-sm">
-                <p>&copy; 2025 Perk Lab. All rights reserved.</p>
+            <div class="copyright">
+                &copy; 2025 IRES Lab. 保留所有权利。
             </div>
         </div>
     </footer>
-</div>
-<script>
-    // 滚动时导航栏效果（假设header在layout中）
-    window.addEventListener('scroll', function () {
-        const header = document.querySelector('header');
-        if (window.scrollY > 10) {
-            header.classList.add('shadow-md');
-            header.classList.remove('shadow-sm');
-        } else {
-            header.classList.remove('shadow-md');
-            header.classList.add('shadow-sm');
-        }
-    });
-    
-    // 卡片动画效果
-    const cards = document.querySelectorAll('.research-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-5px)';
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 为See Details按钮添加交互效果
+        document.querySelectorAll('.btn-details').forEach(button => {
+            button.addEventListener('click', function() {
+                const themeTitle = this.closest('.theme-content').querySelector('.theme-title').textContent;
+                alert(`您点击了 "${themeTitle}" 的详情按钮`);
+            });
         });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
+        
+        // 为研究主题标题添加点击效果
+        document.querySelectorAll('.theme-title').forEach(title => {
+            title.addEventListener('click', function() {
+                alert(`您点击了研究主题: ${this.textContent}`);
+            });
         });
-    });
-</script>
+        
+        // 为图片添加点击放大效果
+        document.querySelectorAll('.theme-img-container').forEach(container => {
+            container.addEventListener('click', function() {
+                const imgSrc = this.querySelector('.theme-img').src;
+                const modalHtml = `
+                    <div class="modal fade" id="imageModal" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <img src="${imgSrc}" class="img-fluid">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.insertAdjacentHTML('beforeend', modalHtml);
+                const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+                modal.show();
+                
+                // 模态框关闭后移除
+                document.getElementById('imageModal').addEventListener('hidden.bs.modal', function() {
+                    this.remove();
+                });
+            });
+        });
+    </script>
+</body>
+</html>
