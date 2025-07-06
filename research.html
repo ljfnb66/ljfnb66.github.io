@@ -3,123 +3,375 @@ layout: default_style
 permalink: /research
 ---
 
+---
+layout: default_style
+permalink: /research
+---
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Themes</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#F53F3F',
+                        tertiary: '#00B42A',
+                        neutral: {
+                            100: '#F2F3F5',
+                            200: '#E5E6EB',
+                            300: '#C9CDD4',
+                            400: '#86909C',
+                            500: '#4E5969',
+                            600: '#272E3B',
+                            700: '#1D2129',
+                        }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                },
+            }
         }
-        .header {
-            background-color: #f8f8f8;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
-        }
-        .section {
-            flex: 1 1 300px;
-            margin: 10px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            text-decoration: none;
-        }
-        .section img {
-            max-width: 100%;
-            height: auto;
-            margin-right: 20px;
-        }
-        .section.reverse img {
-            margin-right: 0;
-            margin-left: 20px;
-        }
-        .section-content {
-            flex: 1;
-        }
-        .section h2 {
-            margin-top: 0;
-            color: #007BFF;
-        }
-        .section p {
-            line-height: 1.6;
-        }
-        .section a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .section a:hover {
-            background-color: #0056b3;
-        }
-        .footer {
-            background-color: #f8f8f8;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .card-shadow {
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+      }
+      .card-shadow-hover {
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .text-balance {
+        text-wrap: balance;
+      }
+      .transition-custom {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+  </style>
 </head>
-<body>
 
-    <div class="header">
-        <h1>Research Themes</h1>
-    </div>
+<body class="font-inter bg-neutral-100 text-neutral-700 min-h-screen flex flex-col">
 
-    <div class="container">
-        <div class="section">
-            <a href="secondary_menu/research/research1.html">
-                <img src="assets/img/IRES_research/research1.png" alt="Image-Guided Navigated Interventions">
-                <div class="section-content">
-                    <h2>Image-Guided Navigated Interventions</h2>
-                    <p>Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical procedures across fields like cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient outcomes.</p>
-                    <a href="secondary_menu/research/research1.html" class="details-button">See Details</a>
+    <main class="flex-grow">
+        <!-- 英雄区域 -->
+        <section class="relative bg-gradient-to-br from-primary/5 to-primary/10 py-16 md:py-24 overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-neutral-700 leading-tight mb-6">
+                        Research Themes
+                    </h1>
+                    <p class="text-[clamp(1rem,2vw,1.25rem)] text-neutral-500 mb-8 text-balance">
+                        Advancing medical technology through innovative research and development in imaging, navigation,
+                        and artificial intelligence.
+                    </p>
                 </div>
-            </a>
-        </div>
+            </div>
 
-        <div class="section">
-            <a href="secondary_menu/research/research1.html">
-                <img src="assets/img/IRES_research/research1.png" alt="Image-Guided Navigated Interventions">
-                <div class="section-content">
-                    <h2>Image-Guided Navigated Interventions</h2>
-                    <p>Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical procedures across fields like cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient outcomes.</p>
-                    <a href="secondary_menu/research/research1.html" class="details-button">See Details</a>
+            <!-- 背景装饰元素 -->
+            <div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+                    <path
+                        d="M100,10 C122,10 140,30 140,50 C140,70 122,90 100,90 C78,90 60,70 60,50 C60,30 78,10 100,10 Z"
+                        fill="#165DFF" />
+                    <path
+                        d="M100,110 C122,110 140,130 140,150 C140,170 122,190 100,190 C78,190 60,170 60,150 C60,130 78,110 100,110 Z"
+                        fill="#165DFF" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- 研究方向卡片区域 -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                    <!-- 研究方向 1 -->
+                    <div
+                        class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover">
+                        <!-- 图片区域 -->
+                        <div class="relative overflow-hidden aspect-[4/3]">
+                            <a href="secondary_menu/research/research1.html" >" class="block w-full h-full">
+                                <img src="assets/img/IRES_research/research1.png"
+                                    alt="Image-Guided Navigated Interventions"
+                                    class="w-full h-full object-cover transition-custom group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-custom flex items-end p-6">
+                                    <span class="text-white font-medium">View Image</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 内容区域 -->
+                        <div class="p-6">
+                            <h2
+                                class="text-xl md:text-2xl font-bold text-neutral-700 mb-3 group-hover:text-primary transition-custom">
+                                <a href="/secondary_menu/research/research1.html" class="hover:underline">Image-Guided Navigated Interventions</a>
+                            </h2>
+                            <p class="text-neutral-500 mb-6 line-clamp-3">
+                                Using advanced imaging and navigation systems to improve the accuracy of medical
+                                procedures across various fields for better patient outcomes.
+                            </p>
+
+                            <!-- 详情按钮 -->
+                            <a href="/secondary_menu/research/research1.html"
+                                class="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white font-medium rounded-lg transition-custom hover:bg-primary hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                <span>See Details</span>
+                                <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 研究方向 2 -->
+                    <div
+                        class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover">
+                        <!-- 图片区域 -->
+                        <div class="relative overflow-hidden aspect-[4/3]">
+                            <a href="/assets/img/IRES_research/research2.png" alt="">" class="block w-full h-full">
+                                <img src="secondary_menu/research/research2.html" alt="Training and Skill Assessment"
+                                    class="w-full h-full object-cover transition-custom group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-custom flex items-end p-6">
+                                    <span class="text-white font-medium">View Image</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 内容区域 -->
+                        <div class="p-6">
+                            <h2
+                                class="text-xl md:text-2xl font-bold text-neutral-700 mb-3 group-hover:text-primary transition-custom">
+                                <a href="/secondary_menu/research/research2.html" class="hover:underline">Training and Skill Assessment</a>
+                            </h2>
+                            <p class="text-neutral-500 mb-6 line-clamp-3">
+                                Developing simulation-based curricula for competency-based medical education, focusing
+                                on skill proficiency for image-guided interventions.
+                            </p>
+
+                            <!-- 详情按钮 -->
+                            <a href="/secondary_menu/research/research2.html"
+                                class="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white font-medium rounded-lg transition-custom hover:bg-primary hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                <span>See Details</span>
+                                <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 研究方向 3 -->
+                    <div
+                        class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover">
+                        <!-- 图片区域 -->
+                        <div class="relative overflow-hidden aspect-[4/3]">
+                            <a href="/secondary_menu/research/research3.html" class="block w-full h-full">
+                                <img src="/assets/img/IRES_research/research3.png" alt="Machine and Deep Learning"
+                                    class="w-full h-full object-cover transition-custom group-hover:scale-105">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-custom flex items-end p-6">
+                                    <span class="text-white font-medium">View Image</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 内容区域 -->
+                        <div class="p-6">
+                            <h2
+                                class="text-xl md:text-2xl font-bold text-neutral-700 mb-3 group-hover:text-primary transition-custom">
+                                <a href="/secondary_menu/research/research3.html" class="hover:underline">Machine and Deep Learning Applications</a>
+                            </h2>
+                            <p class="text-neutral-500 mb-6 line-clamp-3">
+                                Developing AI solutions for medical imaging analysis to detect subtle abnormalities,
+                                aiding in early disease detection and treatment planning.
+                            </p>
+
+                            <!-- 详情按钮 -->
+                            <a href="/secondary_menu/research/research3.html"
+                                class="inline-flex items-center justify-center px-6 py-3 bg-secondary text-white font-medium rounded-lg transition-custom hover:bg-primary hover:shadow-lg hover:shadow-primary/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                <span>See Details</span>
+                                <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </a>
-        </div>
+            </div>
+        </section>
 
-        <div class="section">
-            <a href="secondary_menu/research/research1.html">
-                <img src="assets/img/IRES_research/research1.png" alt="Image-Guided Navigated Interventions">
-                <div class="section-content">
-                    <h2>Image-Guided Navigated Interventions</h2>
-                    <p>Our research focuses on using advanced imaging and navigation systems to improve the accuracy of medical procedures across fields like cardiology, breast cancer, radiation therapy, and virtual reality, leading to better patient outcomes.</p>
-                    <a href="secondary_menu/research/research1.html" class="details-button">See Details</a>
+        <!-- 研究亮点区域 -->
+        <section class="py-16 md:py-24 bg-neutral-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-700 mb-4">Research Highlights</h2>
+                    <p class="text-neutral-500 text-lg">Our ongoing projects and recent achievements in medical research
+                        and technology</p>
                 </div>
-            </a>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <!-- 亮点 1 -->
+                    <div
+                        class="bg-white p-6 rounded-xl text-center card-shadow hover:card-shadow-hover transition-custom">
+                        <div
+                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-medkit text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">3D Ultrasound Technology</h3>
+                        <p class="text-neutral-500 text-sm">Developed advanced 3D ultrasound systems for improved
+                            diagnostic accuracy.</p>
+                    </div>
+
+                    <!-- 亮点 2 -->
+                    <div
+                        class="bg-white p-6 rounded-xl text-center card-shadow hover:card-shadow-hover transition-custom">
+                        <div
+                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Simulation-Based Training</h3>
+                        <p class="text-neutral-500 text-sm">Innovative training programs using virtual reality for
+                            medical professionals.</p>
+                    </div>
+
+                    <!-- 亮点 3 -->
+                    <div
+                        class="bg-white p-6 rounded-xl text-center card-shadow hover:card-shadow-hover transition-custom">
+                        <div
+                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-brain text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">AI-Driven Diagnostics</h3>
+                        <p class="text-neutral-500 text-sm">Artificial intelligence solutions for early disease
+                            detection in medical imaging.</p>
+                    </div>
+
+                    <!-- 亮点 4 -->
+                    <div
+                        class="bg-white p-6 rounded-xl text-center card-shadow hover:card-shadow-hover transition-custom">
+                        <div
+                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fa fa-hospital-o text-2xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Minimally Invasive Procedures</h3>
+                        <p class="text-neutral-500 text-sm">Navigation systems to enhance precision in minimally
+                            invasive surgeries.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-neutral-700 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-white flex items-center justify-center">
+                            <i class="fa fa-flask text-primary text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold">Research Lab</span>
+                    </div>
+                    <p class="text-neutral-400 mb-4">Advancing medical research through innovation and technology.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-neutral-400 hover:text-white transition-custom">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Home</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Research</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Team</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Publications</a>
+                        </li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Research Areas</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Image-Guided
+                                Interventions</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Medical Imaging
+                                AI</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Surgical
+                                Navigation</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Medical
+                                Education</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Minimally Invasive
+                                Tech</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-neutral-400">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mt-1 mr-3"></i>
+                            <span>123 Research Drive, Medical Campus, University City</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-3"></i>
+                            <span>(123) 456-7890</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope mr-3"></i>
+                            <span>info@researchlab.edu</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-neutral-600 mt-10 pt-6 text-center text-neutral-500 text-sm">
+                <p>&copy; 2025 Research Lab. All rights reserved.</p>
+            </div>
         </div>
-    </div>
+    </footer>
 
-    <div class="footer">
-        <p>Copyright © 2025 Your Lab</p>
-    </div>
+    <script>
+        // 滚动时导航栏效果
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
 
+        // 卡片动画效果
+        const cards = document.querySelectorAll('.research-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
 </body>
+
 </html>
