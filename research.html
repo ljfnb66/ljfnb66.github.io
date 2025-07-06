@@ -23,44 +23,22 @@ permalink: /research
                         <img src="assets/img/IRES_research/research1.png" alt="2024robiocablesurgicalrobot"
                             style="width: 100%; border-radius: 5px;">
                     </div>
-
+        
                     <!-- 文字描述 -->
                     <div class="col-md-9">
                         <div class="theme-content">
-                            <h2 class="theme-title">Image-Guided Navigated Interventions</h2>
+                            <!-- 标题添加点击跳转 -->
+                            <h2 class="theme-title" onclick="window.location.href='research.html'">
+                                Image-Guided Navigated Interventions
+                            </h2>
                             <p class="theme-description">
                                 我们的研究专注于利用先进的成像和导航系统来提高医学程序的准确性，涵盖心脏病学、乳腺癌、放射治疗和虚拟现实等领域，从而改善患者的治疗效果。通过精确的图像引导，我们能够实现微创手术的更高精度，减少并发症，并加快患者康复。
                             </p>
-                            <button class="btn btn-details">
+                            <!-- 按钮添加点击跳转 -->
+                            <button class="btn btn-details" onclick="window.location.href='research.html'">
                                 See Details <i class="fas fa-arrow-right"></i>
                             </button>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- 研究主题 1 -->
-        <section class="research-theme">
-            <div class="row align-items-start"> <!-- 调整对齐方式为start，确保内容顶部对齐 -->
-                <div class="col-lg-6 mb-5 mb-lg-0"> <!-- 调整底部边距 -->
-                    <div class="theme-img-container">
-                        <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                            alt="Image-Guided Navigated Interventions" class="theme-img w-100 rounded shadow">
-                        <!-- 添加图片样式 -->
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="theme-content p-4 bg-light rounded-lg"> <!-- 添加背景和内边距 -->
-                        <h2 class="theme-title mb-4">Image-Guided Navigated Interventions</h2> <!-- 增加标题间距 -->
-                        <p class="theme-description mb-5">
-                            我们的研究专注于利用先进的成像和导航系统来提高医学程序的准确性，涵盖心脏病学、乳腺癌、放射治疗和虚拟现实等领域，从而改善患者的治疗效果。通过精确的图像引导，我们能够实现微创手术的更高精度，减少并发症，并加快患者康复。
-                        </p>
-                        <button class="btn btn-details d-block"> <!-- 按钮设为块级元素 -->
-                            See Details <i class="fas fa-arrow-right ms-2"></i> <!-- 调整图标间距 -->
-                        </button>
                     </div>
                 </div>
             </div>
@@ -347,6 +325,7 @@ permalink: /research
         }
 
         .theme-title {
+            cursor: pointer;
             font-size: 1.5rem;
         }
     }
