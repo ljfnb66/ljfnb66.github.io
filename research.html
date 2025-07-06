@@ -7,7 +7,7 @@ permalink: /research
 
 <div class="container">
     <main class="flex-grow">
-        <!-- 英雄区域 -->
+        <!-- 主题区域 -->
         <section class="relative bg-gradient-to-br from-primary/5 to-primary/10 py-16 md:py-24 overflow-hidden">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="max-w-3xl mx-auto text-center">
@@ -20,18 +20,6 @@ permalink: /research
                     </p>
                 </div>
             </div>
-
-            <!-- 背景装饰元素 -->
-            <div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-                    <path
-                        d="M100,10 C122,10 140,30 140,50 C140,70 122,90 100,90 C78,90 60,70 60,50 C60,30 78,10 100,10 Z"
-                        fill="#165DFF" />
-                    <path
-                        d="M100,110 C122,110 140,130 140,150 C140,170 122,190 100,190 C78,190 60,170 60,150 C60,130 78,110 100,110 Z"
-                        fill="#165DFF" />
-                </svg>
-            </div>
         </section>
 
         <!-- 研究方向卡片区域 -->
@@ -41,9 +29,9 @@ permalink: /research
                 <div class="flex flex-col gap-8 md:gap-10">
                     <!-- 研究方向 1 -->
                     <div
-                        class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover">
+                        class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover flex flex-col md:flex-row">
                         <!-- 图片区域 -->
-                        <div class="relative overflow-hidden aspect-[4/3]">
+                        <div class="relative overflow-hidden aspect-[4/3] md:w-1/2">
                             <a href="secondary_menu/research/research1.html" class="block w-full h-full">
                                 <img src="assets/img/IRES_research/research1.png"
                                     alt="Image-Guided Navigated Interventions"
@@ -56,7 +44,7 @@ permalink: /research
                         </div>
 
                         <!-- 内容区域 -->
-                        <div class="p-6">
+                        <div class="p-6 md:w-1/2 flex flex-col justify-center">
                             <h2
                                 class="text-xl md:text-2xl font-bold text-neutral-700 mb-3 group-hover:text-primary transition-custom">
                                 <a href="/secondary_menu/research/research1.html" class="hover:underline">Image-Guided
@@ -78,9 +66,9 @@ permalink: /research
 
                     <!-- 研究方向 2 -->
                     <div
-                        class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover">
+                        class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover flex flex-col md:flex-row-reverse">
                         <!-- 图片区域 -->
-                        <div class="relative overflow-hidden aspect-[4/3]">
+                        <div class="relative overflow-hidden aspect-[4/3] md:w-1/2">
                             <a href="/secondary_menu/research/research2.html" class="block w-full h-full">
                                 <img src="secondary_menu/research/research2.png" alt="Training and Skill Assessment"
                                     class="w-full h-full object-cover transition-custom group-hover:scale-105">
@@ -92,7 +80,7 @@ permalink: /research
                         </div>
 
                         <!-- 内容区域 -->
-                        <div class="p-6">
+                        <div class="p-6 md:w-1/2 flex flex-col justify-center">
                             <h2
                                 class="text-xl md:text-2xl font-bold text-neutral-700 mb-3 group-hover:text-primary transition-custom">
                                 <a href="/secondary_menu/research/research2.html" class="hover:underline">Training and
@@ -114,9 +102,9 @@ permalink: /research
 
                     <!-- 研究方向 3 -->
                     <div
-                        class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover">
+                        class="research-card group bg-white rounded-xl overflow-hidden card-shadow transition-custom hover:card-shadow-hover flex flex-col md:flex-row">
                         <!-- 图片区域 -->
-                        <div class="relative overflow-hidden aspect-[4/3]">
+                        <div class="relative overflow-hidden aspect-[4/3] md:w-1/2">
                             <a href="/secondary_menu/research/research3.html" class="block w-full h-full">
                                 <img src="/assets/img/IRES_research/research3.png" alt="Machine and Deep Learning"
                                     class="w-full h-full object-cover transition-custom group-hover:scale-105">
@@ -128,7 +116,7 @@ permalink: /research
                         </div>
 
                         <!-- 内容区域 -->
-                        <div class="p-6">
+                        <div class="p-6 md:w-1/2 flex flex-col justify-center">
                             <h2
                                 class="text-xl md:text-2xl font-bold text-neutral-700 mb-3 group-hover:text-primary transition-custom">
                                 <a href="/secondary_menu/research/research3.html" class="hover:underline">Machine and
@@ -151,66 +139,6 @@ permalink: /research
             </div>
         </section>
 
-        <!-- 研究亮点区域 -->
-        <section class="py-16 md:py-24 bg-neutral-50">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-neutral-700 mb-4">Research Highlights</h2>
-                    <p class="text-neutral-500 text-lg">Our ongoing projects and recent achievements in medical research
-                        and technology</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                    <!-- 亮点 1 -->
-                    <div
-                        class="bg-white p-6 rounded-xl text-center card-shadow hover:card-shadow-hover transition-custom">
-                        <div
-                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa fa-medkit text-2xl"></i>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">3D Ultrasound Technology</h3>
-                        <p class="text-neutral-500 text-sm">Developed advanced 3D ultrasound systems for improved
-                            diagnostic accuracy.</p>
-                    </div>
-
-                    <!-- 亮点 2 -->
-                    <div
-                        class="bg-white p-6 rounded-xl text-center card-shadow hover:card-shadow-hover transition-custom">
-                        <div
-                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa fa-graduation-cap text-2xl"></i>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Training and Education</h3>
-                        <p class="text-neutral-500 text-sm">Offered comprehensive training programs for medical
-                            professionals.</p>
-                    </div>
-
-                    <!-- 亮点 3 -->
-                    <div
-                        class="bg-white p-6 rounded-xl text-center card-shadow hover:card-shadow-hover transition-custom">
-                        <div
-                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa fa-flask text-2xl"></i>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Medical Imaging AI</h3>
-                        <p class="text-neutral-500 text-sm">Applied artificial intelligence to medical imaging for
-                            better disease detection.</p>
-                    </div>
-
-                    <!-- 亮点 4 -->
-                    <div
-                        class="bg-white p-6 rounded-xl text-center card-shadow hover:card-shadow-hover transition-custom">
-                        <div
-                            class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fa fa-syringe text-2xl"></i>
-                        </div>
-                        <h3 class="font-bold text-lg mb-2">Minimally Invasive Procedures</h3>
-                        <p class="text-neutral-500 text-sm">Navigation systems to enhance precision in minimally
-                            invasive surgeries.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <!-- 页脚 -->
@@ -239,52 +167,6 @@ permalink: /research
                             <i class="fa fa-github"></i>
                         </a>
                     </div>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Home</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Research</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Team</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Publications</a>
-                        </li>
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Research Areas</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Image-Guided
-                                Interventions</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Medical Imaging
-                                AI</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Surgical
-                                Navigation</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Medical
-                                Education</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Minimally Invasive
-                                Tech</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
-                    <ul class="space-y-2 text-neutral-400">
-                        <li class="flex items-start">
-                            <i class="fa fa-map-marker mt-1 mr-3"></i>
-                            <span>123 Research Drive, Medical Campus, University City</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa fa-phone mr-3"></i>
-                            <span>(123) 456-7890</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fa fa-envelope mr-3"></i>
-                            <span>info@researchlab.edu</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
 
