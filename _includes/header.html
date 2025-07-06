@@ -31,8 +31,7 @@
 
         <!-- Research 下拉菜单 -->
         <li class="dropdown">
-          <a href="/research.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-            aria-expanded="false">
+          <a href="/research.html" class="dropdown-link"> <!-- 主链接可点击跳转 -->
             Research <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
@@ -138,28 +137,45 @@
   }
 
   /* 下拉菜单样式 */
-  .dropdown:hover .dropdown-menu {
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-link {
     display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
   }
 
   .dropdown-menu {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    padding: 0;
-    min-width: 220px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ddd;
+    z-index: 1000;
   }
 
-  .dropdown-menu li a {
-    padding: 10px 20px;
-    color: #0A4062;
-    font-size: 14px;
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    /* 悬浮时显示下拉菜单 */
+  }
+
+  .dropdown-menu li {
     display: block;
   }
 
-  .dropdown-menu li a:hover {
-    background-color: #f5f5f5;
+  .dropdown-menu a {
+    display: block;
+    padding: 8px 15px;
     text-decoration: none;
+    color: #333;
+  }
+
+  .dropdown-menu a:hover {
+    background: #f5f5f5;
   }
 </style>
 
