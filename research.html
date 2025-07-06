@@ -21,6 +21,12 @@ permalink: /research
                     <div class="theme-img-container">
                         <img src="assets/img/IRES_research/research1.png"
                             alt="Machine and Deep Learning Applications in Medical Imaging" class="theme-img">
+                    </div>
+                    <div class="theme-img-container">
+                        <img src="assets/img/IRES_research/research1.png"
+                            alt="Machine and Deep Learning Applications in Medical Imaging" class="theme-img">
+                    </div>
+                    <div class="theme-img-container">
                         <img src="assets/img/IRES_research/research1.png"
                             alt="Machine and Deep Learning Applications in Medical Imaging" class="theme-img">
                     </div>
@@ -359,48 +365,5 @@ permalink: /research
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    // 为See Details按钮添加交互效果
-    document.querySelectorAll('.btn-details').forEach(button => {
-        button.addEventListener('click', function () {
-            const themeTitle = this.closest('.theme-content').querySelector('.theme-title').textContent;
-            alert(`您点击了 "${themeTitle}" 的详情按钮`);
-        });
-    });
-
-    // 为研究主题标题添加点击效果
-    document.querySelectorAll('.theme-title').forEach(title => {
-        title.addEventListener('click', function () {
-            alert(`您点击了研究主题: ${this.textContent}`);
-        });
-    });
-
-    // 为图片添加点击放大效果
-    document.querySelectorAll('.theme-img-container').forEach(container => {
-        container.addEventListener('click', function () {
-            const imgSrc = this.querySelector('.theme-img').src;
-            const modalHtml = `
-                <div class="modal fade" id="imageModal" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-body p-0">
-                                <img src="${imgSrc}" class="img-fluid">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-
-            document.body.insertAdjacentHTML('beforeend', modalHtml);
-            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-            modal.show();
-
-            // 模态框关闭后移除
-            document.getElementById('imageModal').addEventListener('hidden.bs.modal', function () {
-                this.remove();
-            });
-        });
-    });
+   
 </script>
