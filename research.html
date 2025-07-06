@@ -5,77 +5,7 @@ permalink: /research
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Themes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#165DFF',
-                        secondary: '#F53F3F',
-                        tertiary: '#00B42A',
-                        neutral: {
-                            100: '#F2F3F5',
-                            200: '#E5E6EB',
-                            300: '#C9CDD4',
-                            400: '#86909C',
-                            500: '#4E5969',
-                            600: '#272E3B',
-                            700: '#1D2129',
-                        }
-                    },
-                    fontFamily: {
-                        inter: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                },
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-
-            .card-shadow {
-                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            }
-
-            .card-shadow-hover {
-                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            }
-
-            .text-balance {
-                text-wrap: balance;
-            }
-
-            .transition-custom {
-                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-        }
-    </style>
-</head>
-
-<body class="font-inter bg-neutral-100 text-neutral-700 min-h-screen flex flex-col">
-    <!-- 头部导航栏，这里假设从header.html引入 -->
-    <header class="bg-white shadow-sm p-4">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-neutral-700">Research Lab</a>
-            <ul class="flex space-x-4">
-                <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Home</a></li>
-                <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Research</a></li>
-                <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Team</a></li>
-                <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Publications</a></li>
-                <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
+<div class="container">
     <main class="flex-grow">
         <!-- 英雄区域 -->
         <section class="relative bg-gradient-to-br from-primary/5 to-primary/10 py-16 md:py-24 overflow-hidden">
@@ -129,7 +59,8 @@ permalink: /research
                         <div class="p-6">
                             <h2
                                 class="text-xl md:text-2xl font-bold text-neutral-700 mb-3 group-hover:text-primary transition-custom">
-                                <a href="/secondary_menu/research/research1.html" class="hover:underline">Image-Guided Navigated Interventions</a>
+                                <a href="/secondary_menu/research/research1.html" class="hover:underline">Image-Guided
+                                    Navigated Interventions</a>
                             </h2>
                             <p class="text-neutral-500 mb-6 line-clamp-3">
                                 Using advanced imaging and navigation systems to improve the accuracy of medical
@@ -164,7 +95,8 @@ permalink: /research
                         <div class="p-6">
                             <h2
                                 class="text-xl md:text-2xl font-bold text-neutral-700 mb-3 group-hover:text-primary transition-custom">
-                                <a href="/secondary_menu/research/research2.html" class="hover:underline">Training and Skill Assessment</a>
+                                <a href="/secondary_menu/research/research2.html" class="hover:underline">Training and
+                                    Skill Assessment</a>
                             </h2>
                             <p class="text-neutral-500 mb-6 line-clamp-3">
                                 Developing simulation-based curricula for competency-based medical education, focusing
@@ -199,7 +131,8 @@ permalink: /research
                         <div class="p-6">
                             <h2
                                 class="text-xl md:text-2xl font-bold text-neutral-700 mb-3 group-hover:text-primary transition-custom">
-                                <a href="/secondary_menu/research/research3.html" class="hover:underline">Machine and Deep Learning Applications</a>
+                                <a href="/secondary_menu/research/research3.html" class="hover:underline">Machine and
+                                    Deep Learning Applications</a>
                             </h2>
                             <p class="text-neutral-500 mb-6 line-clamp-3">
                                 Developing AI solutions for medical imaging analysis to detect subtle abnormalities,
@@ -314,7 +247,8 @@ permalink: /research
                         <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Home</a></li>
                         <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Research</a></li>
                         <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Team</a></li>
-                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Publications</a></li>
+                        <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Publications</a>
+                        </li>
                         <li><a href="#" class="text-neutral-400 hover:text-white transition-custom">Contact</a></li>
                     </ul>
                 </div>
@@ -359,31 +293,29 @@ permalink: /research
             </div>
         </div>
     </footer>
+</div>
 
-    <script>
-        // 滚动时导航栏效果
-        window.addEventListener('scroll', function () {
-            const header = document.querySelector('header');
-            if (window.scrollY > 10) {
-                header.classList.add('shadow-md');
-                header.classList.remove('shadow-sm');
-            } else {
-                header.classList.remove('shadow-md');
-                header.classList.add('shadow-sm');
-            }
+<script>
+    // 滚动时导航栏效果
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 10) {
+            header.classList.add('shadow-md');
+            header.classList.remove('shadow-sm');
+        } else {
+            header.classList.remove('shadow-md');
+            header.classList.add('shadow-sm');
+        }
+    });
+
+    // 卡片动画效果
+    const cards = document.querySelectorAll('.research-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-5px)';
         });
-
-        // 卡片动画效果
-        const cards = document.querySelectorAll('.research-card');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-5px)';
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
         });
-    </script>
-</body>
-
-</html>
+    });
+</script>
