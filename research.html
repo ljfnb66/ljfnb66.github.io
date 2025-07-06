@@ -3,218 +3,7 @@ layout: default_style
 permalink: /research
 ---
 
-
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Themes - IRES Lab</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #0A4062;
-            --secondary-color: #007E7D;
-            --accent-color: #c50000;
-            --accent-hover: #0077b6;
-            --light-bg: #f8f9fa;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background-color: #fff;
-        }
-        
-        .page-header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 70px 0 50px;
-            margin-bottom: 50px;
-        }
-        
-        .page-title {
-            font-weight: 500;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .research-theme {
-            margin-bottom: 80px;
-            padding: 30px 0;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .research-theme:hover {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-        }
-        
-        .theme-img-container {
-            height: 350px;
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .theme-img-container:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-        
-        .theme-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .theme-img-container:hover .theme-img {
-            transform: scale(1.05);
-        }
-        
-        .theme-content {
-            padding: 20px;
-        }
-        
-        .theme-title {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 20px;
-            font-size: 1.8rem;
-            transition: color 0.3s;
-        }
-        
-        .theme-title:hover {
-            color: var(--accent-color);
-            cursor: pointer;
-        }
-        
-        .theme-description {
-            color: #555;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-        }
-        
-        .btn-details {
-            background-color: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-        }
-        
-        .btn-details:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
-        }
-        
-        .btn-details i {
-            margin-left: 8px;
-            transition: transform 0.3s ease;
-        }
-        
-        .btn-details:hover i {
-            transform: translateX(5px);
-        }
-        
-        .section-divider {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
-            margin: 40px 0;
-            border: none;
-        }
-        
-        .icon-feature {
-            font-size: 2.5rem;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-        
-        .feature-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .feature-text {
-            color: #666;
-        }
-        
-        .footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 50px 0 20px;
-            margin-top: 60px;
-        }
-        
-        .footer-title {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 10px;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .social-links a {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            text-align: center;
-            line-height: 40px;
-            margin-right: 10px;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
-            margin-top: 30px;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            .theme-img-container {
-                height: 250px;
-                margin-bottom: 25px;
-            }
-            
-            .theme-title {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
+<div class="container">
     <!-- 页面头部 -->
     <header class="page-header text-center">
         <div class="container">
@@ -364,52 +153,257 @@ permalink: /research
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // 为See Details按钮添加交互效果
-        document.querySelectorAll('.btn-details').forEach(button => {
-            button.addEventListener('click', function() {
-                const themeTitle = this.closest('.theme-content').querySelector('.theme-title').textContent;
-                alert(`您点击了 "${themeTitle}" 的详情按钮`);
-            });
-        });
+
+</div>
+
+
+<style>
+    :root {
+        --primary-color: #0A4062;
+        --secondary-color: #007E7D;
+        --accent-color: #c50000;
+        --accent-hover: #0077b6;
+        --light-bg: #f8f9fa;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: #fff;
+    }
+    
+    .page-header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 70px 0 50px;
+        margin-bottom: 50px;
+    }
+    
+    .page-title {
+        font-weight: 500;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .research-theme {
+        margin-bottom: 80px;
+        padding: 30px 0;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
+    
+    .research-theme:hover {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+    }
+    
+    .theme-img-container {
+        height: 350px;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .theme-img-container:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .theme-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .theme-img-container:hover .theme-img {
+        transform: scale(1.05);
+    }
+    
+    .theme-content {
+        padding: 20px;
+    }
+    
+    .theme-title {
+        color: var(--primary-color);
+        font-weight: 600;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        transition: color 0.3s;
+    }
+    
+    .theme-title:hover {
+        color: var(--accent-color);
+        cursor: pointer;
+    }
+    
+    .theme-description {
+        color: #555;
+        margin-bottom: 30px;
+        font-size: 1.1rem;
+    }
+    
+    .btn-details {
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .btn-details:hover {
+        background-color: var(--accent-hover);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
+    }
+    
+    .btn-details i {
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+    }
+    
+    .btn-details:hover i {
+        transform: translateX(5px);
+    }
+    
+    .section-divider {
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+        margin: 40px 0;
+        border: none;
+    }
+    
+    .icon-feature {
+        font-size: 2.5rem;
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+    }
+    
+    .feature-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+    
+    .feature-text {
+        color: #666;
+    }
+    
+    .footer {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 50px 0 20px;
+        margin-top: 60px;
+    }
+    
+    .footer-title {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+    
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 10px;
+        transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+        color: white;
+    }
+    
+    .social-links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        margin-right: 10px;
+        transition: all 0.3s;
+    }
+    
+    .social-links a:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-3px);
+    }
+    
+    .copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        margin-top: 30px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+        .theme-img-container {
+            height: 250px;
+            margin-bottom: 25px;
+        }
         
-        // 为研究主题标题添加点击效果
-        document.querySelectorAll('.theme-title').forEach(title => {
-            title.addEventListener('click', function() {
-                alert(`您点击了研究主题: ${this.textContent}`);
-            });
+        .theme-title {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // 为See Details按钮添加交互效果
+    document.querySelectorAll('.btn-details').forEach(button => {
+        button.addEventListener('click', function() {
+            const themeTitle = this.closest('.theme-content').querySelector('.theme-title').textContent;
+            alert(`您点击了 "${themeTitle}" 的详情按钮`);
         });
-        
-        // 为图片添加点击放大效果
-        document.querySelectorAll('.theme-img-container').forEach(container => {
-            container.addEventListener('click', function() {
-                const imgSrc = this.querySelector('.theme-img').src;
-                const modalHtml = `
-                    <div class="modal fade" id="imageModal" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-body p-0">
-                                    <img src="${imgSrc}" class="img-fluid">
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
-                                </div>
+    });
+    
+    // 为研究主题标题添加点击效果
+    document.querySelectorAll('.theme-title').forEach(title => {
+        title.addEventListener('click', function() {
+            alert(`您点击了研究主题: ${this.textContent}`);
+        });
+    });
+    
+    // 为图片添加点击放大效果
+    document.querySelectorAll('.theme-img-container').forEach(container => {
+        container.addEventListener('click', function() {
+            const imgSrc = this.querySelector('.theme-img').src;
+            const modalHtml = `
+                <div class="modal fade" id="imageModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <img src="${imgSrc}" class="img-fluid">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
                             </div>
                         </div>
                     </div>
-                `;
-                
-                document.body.insertAdjacentHTML('beforeend', modalHtml);
-                const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-                modal.show();
-                
-                // 模态框关闭后移除
-                document.getElementById('imageModal').addEventListener('hidden.bs.modal', function() {
-                    this.remove();
-                });
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', modalHtml);
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+            
+            // 模态框关闭后移除
+            document.getElementById('imageModal').addEventListener('hidden.bs.modal', function() {
+                this.remove();
             });
         });
-    </script>
-</body>
-</html>
+    });
+</script>
