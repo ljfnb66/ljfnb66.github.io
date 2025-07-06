@@ -16,16 +16,8 @@ permalink: /research
 
         <!-- 研究主题 1 -->
         <section class="research-theme">
-            <div class="row align-items-center">
+            <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
-                    <div class="theme-img-container">
-                        <img src="assets/img/IRES_research/research1.png"
-                            alt="Machine and Deep Learning Applications in Medical Imaging" class="theme-img">
-                    </div>
-                    <div class="theme-img-container">
-                        <img src="assets/img/IRES_research/research1.png"
-                            alt="Machine and Deep Learning Applications in Medical Imaging" class="theme-img">
-                    </div>
                     <div class="theme-img-container">
                         <img src="assets/img/IRES_research/research1.png"
                             alt="Machine and Deep Learning Applications in Medical Imaging" class="theme-img">
@@ -79,7 +71,7 @@ permalink: /research
 
         <!-- 研究主题 2 -->
         <section class="research-theme">
-            <div class="row align-items-center">
+            <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="theme-img-container">
                         <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
@@ -104,7 +96,7 @@ permalink: /research
 
         <!-- 研究主题 3 -->
         <section class="research-theme">
-            <div class="row align-items-center">
+            <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <div class="theme-img-container">
                         <img src="https://images.unsplash.com/photo-1677442135722-5f8ea49cec8a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
@@ -199,14 +191,29 @@ permalink: /research
         transform: translateY(-5px);
     }
 
-    .theme-img-container {
+/* 让图片和内容左右对齐更自然 */
+.research-theme .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 图片固定尺寸并居中对齐 */
+.theme-img-container {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+
+    /* .theme-img-container {
         height: 350px;
         width: 350px;
         overflow: hidden;
         border-radius: 8px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
-    }
+    } */
 
     .theme-img-container:hover {
         transform: scale(1.02);
