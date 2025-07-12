@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 
-  {% include head.html %}
-  {% include header.html %}
-  {% include script.html %}
+{% include head.html %}
+{% include header.html %}
+{% include script.html %}
 
-  <body>
+<body>
     <!-- 轮播图部分（#carousel-section） -->
     <!-- Begin #carousel-section -->
-    <section id="carousel-section" class="section-global-wrapper"> 
+    <section id="carousel-section" class="section-global-wrapper">
         <div class="container-fluid-kamn">
             <div class="row">
                 <div id="carousel-1" class="carousel slide" data-ride="carousel">
@@ -21,7 +21,7 @@
                         <li data-target="#carousel-1" data-slide-to="3"></li>
                         <li data-target="#carousel-1" data-slide-to="4"></li>
                     </ol>
-        
+
                     <!-- Wrapper for slides 轮播内容 -->
                     <div class="carousel-inner" role="listbox">
                         <!-- Begin Slide 1 -->
@@ -57,8 +57,8 @@
                         </div>
                         <!-- End Slide 3 -->
 
-                         <!-- Begin Slide 4 -->
-                         <div class="item">
+                        <!-- Begin Slide 4 -->
+                        <div class="item">
                             <!-- <img src="../assets/img/slider/slide2.jpg" height="400" alt="Image of third carousel"> -->
                             <img src="../assets/img/IRES_slider/slider4.jpg" height="400" alt="Image of first carousel">
                             <div class="carousel-caption">
@@ -68,8 +68,8 @@
                         </div>
                         <!-- End Slide 4 -->
 
-                         <!-- Begin Slide 5 -->
-                         <div class="item">
+                        <!-- Begin Slide 5 -->
+                        <div class="item">
                             <!-- <img src="../assets/img/slider/slide2.jpg" height="400" alt="Image of third carousel"> -->
                             <img src="../assets/img/IRES_slider/slider5.jpg" height="400" alt="Image of first carousel">
                             <div class="carousel-caption">
@@ -79,7 +79,7 @@
                         </div>
                         <!-- End Slide 5 -->
                     </div>
-        
+
                     <!-- Controls 轮播控制按钮-->
                     <!-- 左右按钮通过data-slide属性控制轮播方向（prev/next）
                     使用 Bootstrap glyphicon 图标库显示箭头符号
@@ -101,85 +101,126 @@
     <section id="services" class="services-section section-global-wrapper">
         <div class="container">
             <div class="row">
+
                 <!-- 模块头部（Services Header） -->
                 <div class="services-header">
-                    <h3 class="services-header-title">Unleashing Robotics Potential, Turning Ideas into Reality</h3>
-                    <h3 class="services-header-title">智能机器人与具身智能控制系统实验室</h3>
-                    <p class="services-header-body"><em>Intelligent Robot and Embodied AI System Lab</em></p>
+                    <!-- 英文主标题 -->
+                    <h3 class="services-header-title"
+                        style="font-family: Arial, sans-serif; font-size: 22px; margin: 0;">
+                        Unleashing Robotics Potential, Turning Ideas into Reality
+                    </h3>
+
+                    <!-- 中文副标题 -->
+                    <h3 class="services-header-title"
+                        style="font-family: 'Microsoft YaHei', sans-serif; font-size: 16px; margin: 8px 0 4px;">
+                        智能机器人与具身智能控制系统实验室
+                    </h3>
+
+                    <!-- 英文实验室名称，其中 I R E S 单独加粗与上色 -->
+                    <p class="services-header-body" style="margin: 0;">
+                        <em style="font-family: Arial, sans-serif;">
+                            <span
+                                style="font-family: 'Arial Rounded MT Bold', Arial, sans-serif; color: #FF8C00;">I</span>
+                            <span
+                                style="font-family: 'Arial Rounded MT Bold', Arial, sans-serif; color: #FF8C00;">R</span>
+                            <span
+                                style="font-family: 'Arial Rounded MT Bold', Arial, sans-serif; color: #FF8C00;">E</span>
+                            <span
+                                style="font-family: 'Arial Rounded MT Bold', Arial, sans-serif; color: #FF8C00;">S</span>
+                            <span style="font-family: Arial, sans-serif;">&nbsp;Intelligent Robot and Embodied AI System
+                                Lab</span>
+                        </em>
+                    </p>
+                </div>
+
+
+                <!-- 模块头部（Services Header） -->
+                <!-- <div class="services-header"> -->
+                    <!-- <h3 class="services-header-title">Unleashing Robotics Potential, Turning Ideas into Reality</h3> -->
+                    <!-- <h3 class="services-header-title">智能机器人与具身智能控制系统实验室</h3> -->
+                    <!-- <p class="services-header-body"><em>Intelligent Robot and Embodied AI System Lab</em></p> -->
 
                     <!-- <h3 class="services-header-title">智能机器人设计与机电控制实验室 @ BUPT</h3> -->
                     <!-- <p class="services-header-body"><em> Intelligent Robot With Creativity And Application Lab @ BUPT</em>  </p> -->
                     <!-- <p style="font-size: 16px; color: #007E7D;">探索机器人创新设计与智能控制前沿技术，致力于医疗、航天与工业领域的智能化解决方案。</p><hr> -->
-                </div>
+                <!-- </div> -->
+
             </div>
-      
+
             <!-- Begin Services Row 1 -->
             <div class="row services-row services-row-head services-row-1">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="services-group wow animated fadeInLeft" data-wow-offset="40">
                         <p class="services-icon"><span class="fa fa-android fa-5x"></span></p>
                         <h4 class="services-title">Android</h4>
-                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis erat quis dignissim.</p>
+                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis
+                            erat quis dignissim.</p>
                         <p class="services-more"><a href="#">Find Out More</a></p>
                     </div>
                 </div>
-        
+
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="services-group wow animated zoomIn" data-wow-offset="40">
                         <p class="services-icon"><i class="fa fa-apple fa-5x"></i></p>
                         <h4 class="services-title">Appleaa</h4>
-                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis erat quis dignissim.</p>
+                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis
+                            erat quis dignissim.</p>
                         <p class="services-more"><a href="#">Find Out More</a></p>
                     </div>
                 </div>
-        
+
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="services-group wow animated fadeInRight" data-wow-offset="40">
                         <p class="services-icon"><i class="fa fa-thumbs-o-up fa-5x"></i></p>
                         <h4 class="services-title">EASY TO USE</h4>
-                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis erat quis dignissim.</p>
+                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis
+                            erat quis dignissim.</p>
                         <p class="services-more"><a href="#">Find Out More</a></p>
-                    </div>        
+                    </div>
                 </div>
             </div>
             <!-- End Serivces Row 1 -->
-      
+
             <!-- Begin Services Row 2 -->
             <div class="row services-row services-row-tail services-row-2">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="services-group wow animated fadeInLeft" data-wow-offset="40">
                         <p class="services-icon"><span class="fa fa-windows fa-5x"></span></p>
                         <h4 class="services-title">Windows</h4>
-                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis erat quis dignissim.</p>
+                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis
+                            erat quis dignissim.</p>
                         <p class="services-more"><a href="#">Find Out More</a></p>
                     </div>
                 </div>
-        
+
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="services-group wow animated zoomIn" data-wow-offset="40">
                         <p class="services-icon"><i class="fa fa-eye fa-5x"></i></p>
                         <h4 class="services-title">RETINA READY</h4>
-                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis erat quis dignissim.</p>
+                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis
+                            erat quis dignissim.</p>
                         <p class="services-more"><a href="#">Find Out More</a></p>
                     </div>
                 </div>
-        
+
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="services-group wow animated fadeInRight" data-wow-offset="40">
                         <p class="services-icon"><i class="fa fa-cube fa-5x"></i></p>
                         <h4 class="services-title">Cubic</h4>
-                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis erat quis dignissim.</p>
+                        <p class="services-body">Cras interdum placerat libero vel tempor. Curabitur gravida iaculis
+                            erat quis dignissim.</p>
                         <p class="services-more"><a href="#">Find Out More</a></p>
                     </div>
                 </div>
             </div>
             <!-- End Serivces Row 2 -->
-    
-        </div>      
+
+        </div>
     </section>
     <!-- End #services-section -->
 
-  </body>
+</body>
 
-  {% include footer.html %}
+{% include footer.html %}
+
 </html>
