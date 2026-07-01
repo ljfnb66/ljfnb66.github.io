@@ -22,6 +22,12 @@
             <!-- Fax: {{ site.fax_number }} <br> -->
             Email: {{ site.company_email }}<br>
           </p>
+          <div id="footer-visit-stats" class="footer-visit-stats" aria-label="Website visit statistics">
+            <div>Total visits: <span id="footer-total-visits">0</span></div>
+            <div>Online now: <span id="footer-online-count">0</span></div>
+            <div>Page ranking:</div>
+            <div id="footer-page-rank"></div>
+          </div>
         </div>
         <div class="col-md-4">
           <h3><i class="fa fa-external-link"></i> Links</h3>
@@ -100,6 +106,30 @@
       <!-- <br>Theme ported by <a href="https://melvinchng.github.io/" target="_blank">Melvin Ch'ng</a></p> -->
     </div>
   </footer>
+  <style>
+    .footer-visit-stats {
+      color: #000;
+      font-size: 12px;
+      line-height: 1.5;
+      margin-top: 14px;
+      min-height: 82px;
+      user-select: text;
+      -webkit-user-select: text;
+    }
+
+    .footer-visit-stats * {
+      color: #000;
+      user-select: text;
+      -webkit-user-select: text;
+    }
+
+    .footer-visit-stats::selection,
+    .footer-visit-stats *::selection {
+      background: #b6d7ff;
+      color: #000;
+    }
+  </style>
+  <script type="module" src="/assets/js/visit-footer.js"></script>
 </body>
 
 </html>

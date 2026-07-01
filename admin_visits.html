@@ -1,0 +1,327 @@
+---
+layout: default_style
+permalink: /admin_visits
+---
+
+<div class="container visit-admin">
+  <div class="visit-admin-header">
+    <h1>Website Visits</h1>
+    <button id="sign-out" class="visit-admin-button secondary" type="button" hidden>Sign out</button>
+  </div>
+
+  <div id="setup-warning" class="visit-admin-panel" hidden>
+    <h2>Visit counter is not enabled</h2>
+    <p>Open <code>assets/js/visit-config.js</code>, fill in your Firebase config, and set <code>visitCounterEnabled</code> to <code>true</code>.</p>
+  </div>
+
+  <form id="login-form" class="visit-admin-panel">
+    <h2>Owner Login</h2>
+    <label>
+      Email
+      <input id="email" type="email" autocomplete="email" required>
+    </label>
+    <label>
+      Password
+      <input id="password" type="password" autocomplete="current-password" required>
+    </label>
+    <button class="visit-admin-button" type="submit">Log in</button>
+    <p id="login-error" class="visit-admin-error" hidden></p>
+  </form>
+
+  <div id="dashboard" hidden>
+    <div class="visit-stats-grid">
+      <section class="visit-stat">
+        <span>Online Now</span>
+        <strong id="online-count">0</strong>
+      </section>
+      <section class="visit-stat">
+        <span>Total Visits</span>
+        <strong id="total-visits">0</strong>
+      </section>
+      <section class="visit-stat">
+        <span>Today's Visits</span>
+        <strong id="today-visits">0</strong>
+      </section>
+    </div>
+
+    <section class="visit-admin-panel">
+      <h2>Popular Pages</h2>
+      <div class="visit-table-wrap">
+        <table class="visit-table">
+          <thead>
+            <tr>
+              <th>Page</th>
+              <th>Visits</th>
+              <th>Last Visit</th>
+            </tr>
+          </thead>
+          <tbody id="pages-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="visit-admin-panel">
+      <h2>Currently Online</h2>
+      <div id="online-list" class="online-list"></div>
+    </section>
+  </div>
+</div>
+
+<style>
+  .visit-admin {
+    padding: 32px 15px 60px;
+  }
+
+  .visit-admin-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .visit-admin-header h1 {
+    color: #0A4062;
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .visit-admin-panel {
+    background: #fff;
+    border: 1px solid #e6edf2;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    padding: 20px;
+  }
+
+  .visit-admin-panel h2 {
+    color: #0A4062;
+    font-size: 20px;
+    margin: 0 0 16px;
+  }
+
+  .visit-admin-panel label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+
+  .visit-admin-panel input {
+    border: 1px solid #cbd6df;
+    border-radius: 4px;
+    display: block;
+    font-size: 16px;
+    margin-top: 6px;
+    padding: 10px 12px;
+    width: 100%;
+  }
+
+  .visit-admin-button {
+    background: #0A4062;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 18px;
+  }
+
+  .visit-admin-button.secondary {
+    background: #5f6f7a;
+  }
+
+  .visit-admin-error {
+    color: #b00020;
+    margin: 12px 0 0;
+  }
+
+  .visit-stats-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 24px;
+  }
+
+  .visit-stat {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 18px;
+  }
+
+  .visit-stat span {
+    color: #5f6f7a;
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .visit-stat strong {
+    color: #0A4062;
+    font-size: 30px;
+  }
+
+  .visit-table-wrap {
+    overflow-x: auto;
+  }
+
+  .visit-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .visit-table th,
+  .visit-table td {
+    border-bottom: 1px solid #e6edf2;
+    padding: 10px 8px;
+    text-align: left;
+  }
+
+  .online-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .online-item {
+    background: #f8fafc;
+    border-radius: 4px;
+    padding: 10px 12px;
+  }
+
+  @media (max-width: 767px) {
+    .visit-stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script type="module">
+  import { firebaseConfig, visitCounterEnabled } from "/assets/js/visit-config.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+  import {
+    getAuth,
+    onAuthStateChanged,
+    signInWithEmailAndPassword,
+    signOut
+  } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+  import {
+    getDatabase,
+    onValue,
+    ref
+  } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-database.js";
+
+  const setupWarning = document.getElementById("setup-warning");
+  const loginForm = document.getElementById("login-form");
+  const loginError = document.getElementById("login-error");
+  const dashboard = document.getElementById("dashboard");
+  const signOutButton = document.getElementById("sign-out");
+  const onlineCount = document.getElementById("online-count");
+  const totalVisits = document.getElementById("total-visits");
+  const todayVisits = document.getElementById("today-visits");
+  const pagesTable = document.getElementById("pages-table");
+  const onlineList = document.getElementById("online-list");
+
+  if (!visitCounterEnabled) {
+    setupWarning.hidden = false;
+    loginForm.hidden = true;
+  } else {
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getDatabase(app);
+    const today = new Date().toISOString().slice(0, 10);
+
+    loginForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      loginError.hidden = true;
+
+      try {
+        await signInWithEmailAndPassword(
+          auth,
+          document.getElementById("email").value,
+          document.getElementById("password").value
+        );
+      } catch (error) {
+        loginError.textContent = "Login failed. Please check the email and password.";
+        loginError.hidden = false;
+      }
+    });
+
+    signOutButton.addEventListener("click", () => signOut(auth));
+
+    onAuthStateChanged(auth, (user) => {
+      const loggedIn = Boolean(user);
+      loginForm.hidden = loggedIn;
+      dashboard.hidden = !loggedIn;
+      signOutButton.hidden = !loggedIn;
+
+      if (loggedIn) {
+        watchDashboard(db, today);
+      }
+    });
+  }
+
+  function watchDashboard(db, today) {
+    onValue(ref(db, "stats/total/pageviews"), (snapshot) => {
+      totalVisits.textContent = formatNumber(snapshot.val() || 0);
+    });
+
+    onValue(ref(db, `stats/daily/${today}/pageviews`), (snapshot) => {
+      todayVisits.textContent = formatNumber(snapshot.val() || 0);
+    });
+
+    onValue(ref(db, "presence"), (snapshot) => {
+      const online = snapshot.val() || {};
+      const entries = Object.values(online);
+      onlineCount.textContent = formatNumber(entries.length);
+      onlineList.innerHTML = entries.length
+        ? entries.map(renderOnlineItem).join("")
+        : "<p>No active visitors right now.</p>";
+    });
+
+    onValue(ref(db, "stats/pages"), (snapshot) => {
+      const pages = Object.values(snapshot.val() || {})
+        .sort((a, b) => (b.views || 0) - (a.views || 0))
+        .slice(0, 20);
+
+      pagesTable.innerHTML = pages.length
+        ? pages.map(renderPageRow).join("")
+        : '<tr><td colspan="3">No visits recorded yet.</td></tr>';
+    });
+  }
+
+  function renderPageRow(page) {
+    return `
+      <tr>
+        <td>${escapeHtml(page.path || "")}</td>
+        <td>${formatNumber(page.views || 0)}</td>
+        <td>${formatDate(page.lastVisitedAt)}</td>
+      </tr>
+    `;
+  }
+
+  function renderOnlineItem(visitor) {
+    return `
+      <div class="online-item">
+        <strong>${escapeHtml(visitor.path || "")}</strong><br>
+        Last seen: ${formatDate(visitor.lastSeenAt)}
+      </div>
+    `;
+  }
+
+  function formatNumber(value) {
+    return new Intl.NumberFormat().format(value);
+  }
+
+  function formatDate(value) {
+    if (!value) {
+      return "-";
+    }
+
+    return new Date(value).toLocaleString();
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+  }
+</script>
