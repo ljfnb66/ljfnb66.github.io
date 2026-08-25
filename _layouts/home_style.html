@@ -60,15 +60,17 @@
 
         #carousel-1 .carousel-inner,
         #carousel-1 .item {
-            background: #f5f5f5;
-            height: min(52vw, 640px);
-            min-height: 360px;
+            background: transparent;
+            height: auto;
+            max-height: none !important;
+            min-height: 0;
         }
 
         #carousel-1 .item img {
             display: block;
-            height: 100%;
-            object-fit: contain;
+            height: auto;
+            max-height: none;
+            object-fit: initial;
             object-position: center;
             width: 100%;
         }
@@ -76,8 +78,8 @@
         @media (max-width: 767px) {
             #carousel-1 .carousel-inner,
             #carousel-1 .item {
-                height: 62vw;
-                min-height: 240px;
+                height: auto;
+                min-height: 0;
             }
         }
     </style>
