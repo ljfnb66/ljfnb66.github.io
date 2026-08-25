@@ -13,73 +13,22 @@
             <div class="row">
                 <div id="carousel-1" class="carousel slide" data-ride="carousel">
 
+                    {% assign carousel_images = "slider1_update(3).jpg|slider9.jpg|slider10.jpg|slider8.jpg|slider7.png|slider3.jpg|slider4_update(1).jpg" | split: "|" %}
+
                     <!-- Indicators  指示器-->
                     <ol class="carousel-indicators visible-lg">
-                        <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-1" data-slide-to="1"></li>
-                        <li data-target="#carousel-1" data-slide-to="2"></li>
-                        <li data-target="#carousel-1" data-slide-to="3"></li>
-                        <li data-target="#carousel-1" data-slide-to="4"></li>
+                        {% for image in carousel_images %}
+                        <li data-target="#carousel-1" data-slide-to="{{ forloop.index0 }}"{% if forloop.first %} class="active"{% endif %}></li>
+                        {% endfor %}
                     </ol>
 
                     <!-- Wrapper for slides 轮播内容 -->
                     <div class="carousel-inner" role="listbox">
-                        <!-- Begin Slide 1 -->
-                        <div class="item active">
-                            <!-- <img src="../assets/img/slider/slide2.jpg" height="400" alt="Image of first carousel"> -->
-                            <img src="../assets/img/IRES_slider/slider1_update(3).jpg" height="600" alt="Image of 1 carousel">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">Office BOOTSTRAP TEMPLATE</h3>
-                                <p class="carousel-body">RESPONSIVE \ MULTI PAGE</p>
-                            </div>
+                        {% for image in carousel_images %}
+                        <div class="item{% if forloop.first %} active{% endif %}">
+                            <img src="/assets/img/IRES_slider/{{ image }}" alt="IRES Lab carousel image {{ forloop.index }}">
                         </div>
-                        <!-- End Slide 1 -->
-
-                        <!-- Begin Slide 2 -->
-                        <div class="item">
-                            <!-- <img src="../assets/img/slider/slide4.jpg" height="400" alt="Image of second carousel"> -->
-                            <img src="../assets/img/IRES_slider/slider7.png" height="400" alt="Image of 2 carousel">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">EASY TO CUSTOMIZE</h3>
-                                <p class="carousel-body">BEAUTIFUL \ CLEAN \ MINIMAL</p>
-                            </div>
-                        </div>
-                        <!-- End Slide 2 -->
-
-                        <!-- Begin Slide 3 -->
-                        <div class="item">
-                            <!-- <img src="../assets/img/slider/slide2.jpg" height="400" alt="Image of third carousel"> -->
-                            <img src="../assets/img/IRES_slider/slider3.jpg" height="400" alt="Image of 3 carousel">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">MULTI-PURPOSE TEMPLATE</h3>
-                                <p class="carousel-body">PORTFOLIO \ CORPORATE \ CREATIVE</p>
-                            </div>
-                        </div>
-                        <!-- End Slide 3 -->
-
-                        <!-- Begin Slide 4 -->
-                        <div class="item">
-                            <!-- <img src="../assets/img/slider/slide2.jpg" height="400" alt="Image of third carousel"> -->
-                            <img src="../assets/img/IRES_slider/slider4_update(1).jpg" height="400" alt="Image of 4 carousel">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">MULTI-PURPOSE TEMPLATE</h3>
-                                <p class="carousel-body">PORTFOLIO \ CORPORATE \ CREATIVE</p>
-                            </div>
-                        </div>
-                        <!-- End Slide 4 -->
-
-                        <!-- Begin Slide 5 -->
-                        <div class="item">
-                            <!-- <img src="../assets/img/slider/slide2.jpg" height="400" alt="Image of third carousel"> -->
-                            <img src="../assets/img/IRES_slider/slider6.jpg" height="400" alt="Image of 5 carousel">
-                            <div class="carousel-caption">
-                                <h3 class="carousel-title hidden-xs">MULTI-PURPOSE TEMPLATE</h3>
-                                <p class="carousel-body">PORTFOLIO \ CORPORATE \ CREATIVE</p>
-                            </div>
-                        </div>
-                        <!-- End Slide 5 -->
-
-
+                        {% endfor %}
                     </div>
 
                     <!-- Controls 轮播控制按钮-->
@@ -97,6 +46,40 @@
         </div>
     </section>
     <!-- End #carousel-section -->
+
+    <style>
+        #carousel-section .container-fluid-kamn {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        #carousel-section .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        #carousel-1 .carousel-inner,
+        #carousel-1 .item {
+            height: min(52vw, 560px);
+            min-height: 360px;
+        }
+
+        #carousel-1 .item img {
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            #carousel-1 .carousel-inner,
+            #carousel-1 .item {
+                height: 62vw;
+                min-height: 240px;
+            }
+        }
+    </style>
 
 
     <!-- Begin #services-section  服务介绍部分 -->

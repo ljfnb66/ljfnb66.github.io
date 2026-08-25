@@ -17,6 +17,21 @@ permalink: /news
 
 
       
+      <article style="margin-bottom: 40px;" id="The-Second-World-Humanoid-Robot-Games">
+        <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">☆ 北邮IRES实验室在第二届世界人形机器人运动会灵巧手专项赛上获得佳绩</h2>
+        <p style="font-size: 16px; line-height: 1.8; margin-bottom: 15px;">
+          北邮IRES实验室在第二届世界人形机器人运动会灵巧手专项赛上获得季军铜牌1枚，灵巧手操作锤子将钉子快速精准钉到物体上，获得殿军第4名2枚以及第6名1枚，第7名2枚，第8名1枚。课题组博士生刘汉卿等同学接受北京电视台、中央电视台等媒体采访。
+        </p>
+        <p style="font-size: 16px; line-height: 1.8; margin-bottom: 20px;">
+          相关视频链接：
+          <a href="https://weixin.qq.com/sph/AgWuU3oLcg" target="_blank" rel="noopener noreferrer" style="color:#0099ff;">https://weixin.qq.com/sph/AgWuU3oLcg</a>
+        </p>
+        <div class="news-image-grid">
+          <img src="assets/img/IRES_news/The-Second-World-Humanoid-Robot-Games-photo1.jpg" alt="第二届世界人形机器人运动会灵巧手专项赛现场照片1">
+          <img src="assets/img/IRES_news/The-Second-World-Humanoid-Robot-Games-photo2.jpg" alt="第二届世界人形机器人运动会灵巧手专项赛现场照片2">
+        </div>
+      </article>
+
       <article style="margin-bottom: 40px;" id="The-second-academic-symposium">
         <h2 style="font-size: 24px; margin-bottom: 20px; font-weight: 500;">☆ 课题组秋季学期第2次学术研讨与经验分享会。汇报人：郭家承博士生、周成博士生。主持人：赵婧沂。</h2>
         <img src="assets/img/IRES_news/20251017_1.jpg" alt="学术研讨与经验分享会" style="width: 100%; max-width: 700px; height: auto; margin-bottom: 20px; border-radius: 5px;">
@@ -88,12 +103,18 @@ permalink: /news
     <!-- Vertical Line Separator -->
     <div style="flex: 0; width: 1px; background-color: #ddd; margin: 0 20px;"></div> <!-- 添加的垂直分隔线 -->
 
+
+
+    <!-- 右侧的索引栏 -->
     <!-- Right Side: Calendar and Recent Posts -->
     <div style="flex: 1;">
       <!-- Recent Posts -->
       <div style="margin-bottom: 30px;">
-        <h3 style="font-size: 18px; margin-bottom: 15px; font-weight: 500;">Recent Posts</h3>
+        <h3 style="font-size: 18px; margin-bottom: 15px; font-weight: 500;">Recent Post</h3>
         <ul style="list-style-type: none; padding-left: 0;">
+          <li style="margin-bottom: 10px;">
+            <a href="#The-Second-World-Humanoid-Robot-Games" style="color: #0A4062; text-decoration: none;">第二届世界人形机器人运动会灵巧手专项赛获奖</a>
+          </li>
           <li style="margin-bottom: 10px;">
             <a href="#The-second-academic-symposium" style="color: #0A4062; text-decoration: none;">课题组秋季学期第2次学术研讨与经验分享会</a>
           </li>
@@ -146,6 +167,31 @@ permalink: /news
   a:hover {
     color: #007E7D !important;
     cursor: pointer;
+  }
+
+  .news-image-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 20px;
+    max-width: 700px;
+  }
+
+  .news-image-grid img {
+    border-radius: 5px;
+    height: 260px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .news-image-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .news-image-grid img {
+      height: auto;
+    }
   }
 </style>
 
